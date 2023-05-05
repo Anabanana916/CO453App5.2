@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bomb here.
+ * Write a description of class Challenge3 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Bomb extends Screen
+public class Challenge3 extends Screen
 {
 
     private EnPisee testEnPisee;
@@ -16,22 +16,23 @@ public class Bomb extends Screen
     private Buttons op2Button;
     private Buttons op3Button; 
     private Buttons op4Button;
-    public Bomb()
+    
+    public Challenge3()
     {
         super(800, 600, 1);
     }
     
-    public void createButtons(Screen climb) {
-        op1Button = new Buttons("Option1.png", climb);
+    public void createButtons(Screen neutralEnd) {
+        op1Button = new Buttons("Option1.png", neutralEnd);
         addObject(op1Button, 100, 475);
         
-        op2Button = new Buttons("Option2.png", climb);
+        op2Button = new Buttons("Option2.png", neutralEnd);
         addObject(op2Button, 100, 540);
         
-        op3Button = new Buttons("Option3.png", climb);
+        op3Button = new Buttons("Option3.png", neutralEnd);
         addObject(op3Button, 275, 475);
         
-        op4Button = new Buttons("Option4.png", climb);
+        op4Button = new Buttons("Option4.png", neutralEnd);
         addObject(op4Button, 275, 540);
     }
     

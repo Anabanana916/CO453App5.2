@@ -16,4 +16,12 @@ public class Items extends Actor
     {
         // Add your action code here.
     }
+    
+    public Items(String imageName){
+        setImage(imageName);
+        GreenfootImage image = getImage();
+        setImage(new GreenfootImage(image));
+        image.scale(image.getWidth() * 1, image.getHeight() * 1);
+        setImage(image);
+    }
 }
