@@ -22,6 +22,7 @@ public class Start extends Screen
     public Challenge2 challenge2;
     public Challenge3 challenge3;
     public NeutralEnd neutralEnd;
+    public Gameover gameover;
     
     public Sneak1 sneak1;
     
@@ -42,11 +43,14 @@ public class Start extends Screen
         challenge2 = new Challenge2();
         challenge3 = new Challenge3();
         neutralEnd = new NeutralEnd();
+        gameover = new Gameover();
         
         sneak1 = new Sneak1();
         
         main.createButtons(intro);
-        main.createEnPisee();
+        
+        gameover.createButtons(main);
+        gameover.createEnPisee();
         
         intro.createButtons(village);
         intro.createEnPisee();
@@ -59,6 +63,7 @@ public class Start extends Screen
         
         oldCrone.createButtons(river);
         oldCrone.createEnPisee();
+        oldCrone.createGOButtons(gameover);
         oldCrone.createPlayerWeapon();
         
         river.createButtons(bomb);
