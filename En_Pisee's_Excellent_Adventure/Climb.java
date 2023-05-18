@@ -36,6 +36,8 @@ public class Climb extends Screen
         System.out.println("2) Take the scenic route");
         System.out.println("3) Wait for a lift");
         
+        createEnPisee();
+        
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
     }

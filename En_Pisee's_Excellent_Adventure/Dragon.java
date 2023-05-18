@@ -35,6 +35,8 @@ public class Dragon extends Screen
         System.out.println("3) Drink potion");
         System.out.println("4) Sneak up to dragon");
         
+        createEnPisee();
+        
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
     }

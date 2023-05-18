@@ -39,7 +39,8 @@ public class Main extends Screen {
         // Check if the mouse click occurred on the 'op1Button' object
         if (Greenfoot.mouseClicked(op1Button)) {
             // Print "Game Starts" to the console
-            System.out.println("Game Starts");
+            //System.out.println("Game Starts");
+            
             
             // Transition to the 'Intro' world by setting the world to a new instance of 'Intro'
             Greenfoot.setWorld(new Intro());

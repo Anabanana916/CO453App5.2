@@ -40,6 +40,8 @@ public class Village extends Screen
         System.out.println("4) Look at them in disgust");
         System.out.print(">  ");
         
+        createEnPisee();
+        
         // Check if the value of 'i' is 5
         if (i == 5) {
             // NPC leaves ending
@@ -132,7 +134,7 @@ public class Village extends Screen
     public void createEnPisee() {
         // Method to create the EnPisee character
         
-        // Create an instance of the 'EnPisee' class named 'testEnPisee' with the image "NPCRightArm.png"
+        // Create an instance of the 'EnPisee' class named 'testEnPisee' with the image "NPChappy.png"
         testEnPisee = new EnPisee("NPCRightArm.png");
         
         // Add the 'testEnPisee' object to the world at coordinates (400, 300)

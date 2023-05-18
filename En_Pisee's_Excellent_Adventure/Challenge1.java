@@ -35,6 +35,8 @@ public class Challenge1 extends Screen
         System.out.println("3) Dance off");
         System.out.println("4) Just a joke bro!");
         
+        createEnPisee();
+        
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
     }

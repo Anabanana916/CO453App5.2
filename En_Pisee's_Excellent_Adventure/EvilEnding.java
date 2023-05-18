@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class NeutralEnd here.
+ * Write a description of class EvilEnding here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class NeutralEnd extends Screen
+public class EvilEnding extends Screen
 {
 
     private EnPisee testEnPisee;
@@ -17,7 +17,7 @@ public class NeutralEnd extends Screen
     private Buttons op3Button; 
     private Buttons op4Button;
     
-    public NeutralEnd()
+    public EvilEnding()
     {
         super(800, 600, 1);
         

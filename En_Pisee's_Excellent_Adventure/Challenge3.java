@@ -36,6 +36,8 @@ public class Challenge3 extends Screen
         System.out.println("2) Dodge");
         System.out.println("3) Charge");
         
+        createEnPisee();
+        
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
     }
@@ -73,7 +75,7 @@ public class Challenge3 extends Screen
             System.out.println("the village square, and you are heralded as a hero.");
             
             // Transition to the 'Challenge2' world by setting the world to a new instance of 'Challenge2'
-            Greenfoot.setWorld(new Challenge2());
+            Greenfoot.setWorld(new NeutralEnd());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {

@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The Sneak1 class represents the first sneak challenge in the game. It extends 
+ * The Sneak2 class represents the first sneak challenge in the game. It extends 
  * the Screen class and provides the introduction and choices for the challenge. 
  * The class creates buttons for the choices and handles mouse click events to 
  * perform actions based on the selected option. It also has a method to create 
@@ -10,7 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Sneak1 extends Screen
+public class Sneak2 extends Screen
 {
     // Declare private instance variables
     private EnPisee testEnPisee;
@@ -18,18 +18,18 @@ public class Sneak1 extends Screen
     private Buttons op2Button;
     private Buttons op3Button;
     
-    // Sneak1 class constructor
-    public Sneak1()
+    // Sneak2 class constructor
+    public Sneak2()
     {
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
         
         // Print the introduction and choices for the sneak challenge to the console
-        System.out.println("You get behind the dragon, but you knock over some coins! The sound causes the dragon");
-        System.out.println("to raise its head suddenly and start looking around.");
-        System.out.println("1) Freeze");
-        System.out.println("2) Hide");
-        System.out.println("3) Say Hi");
+        System.out.println("You edge ever closer to the beast. It's large, powerful form lay resting peacefully");
+        System.out.println("as you close in on it's belly.");
+        System.out.println("1) Lighter");
+        System.out.println("2) Sneak");
+        System.out.println("3) Sneeze");
         
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
@@ -54,9 +54,11 @@ public class Sneak1 extends Screen
         
         if (Greenfoot.mouseClicked(op1Button)) {
             System.out.println("OPTION 1 SELECTED");
-            System.out.println("You once heard that a dragon's vision is based on movement.");
-            System.out.println("You heard wrong.");
-            System.out.println("The Dragon crushes you with its tail.");
+            System.out.println("You approach the tail of the Dragon. Pull out your lighter and ignite their");
+            System.out.println("tail. The fire catches disturbingly well. The beast screams and fails as it");
+            System.out.println("begins to burn. It's scales beginning to crisp and flake off the body whilst");
+            System.out.println("it slowly burns to death. You slew the beast. The dragon is no more. Some");
+            System.out.println("saying it's pained howls haunting the caves forever.");
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
@@ -64,17 +66,20 @@ public class Sneak1 extends Screen
         
         if (Greenfoot.mouseClicked(op2Button)) {
             System.out.println("OPTION 2 SELECTED");
-            System.out.println("You duck behind a pile of treasure. The Dragon takes a moment, before returning to its rest.");
+            System.out.println("You make your way under the dragon's soft, under belly.");
             
             // Transition to the next sneak challenge (Sneak2) by creating a new instance of 'Sneak2' world
-            Greenfoot.setWorld(new Sneak2());
+            Greenfoot.setWorld(new Sneak3());
         }
         
         if (Greenfoot.mouseClicked(op3Button)) {
             System.out.println("OPTION 3 SELECTED");
-            System.out.println("The Dragon looks at you, bewildered. Then smiles.");
-            System.out.println("'Goodbye.'");
-            System.out.println("It blasts you with its lightning breath.");
+            System.out.println("'A-A-ACHOO!' Your sneeze echos through the cave. Waking the dragon who's head");
+            System.out.println("snaps to look at you. It looks at you with a level of disappointment you");
+            System.out.println("normally only reserved for parents.");
+            System.out.println("'Really?' The Dragon asks, before briefly getting up, and then crushing you");
+            System.out.println("underneath it's large body.");
+
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());

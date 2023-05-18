@@ -28,6 +28,8 @@ public class OldCrone extends Screen
         System.out.println("2) Ignore");
         System.out.println("3) Berate");
         
+        createEnPisee();
+        
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
     }

@@ -37,6 +37,7 @@ public class River extends Screen
         System.out.println("3) Hop across rocks");
         System.out.println("4) Take the bridge");
         
+        createEnPisee();
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
     }

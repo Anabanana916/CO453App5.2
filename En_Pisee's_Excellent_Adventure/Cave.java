@@ -36,6 +36,8 @@ public class Cave extends Screen
         System.out.println("3) Run through dangerous cave");
         System.out.print(">  ");
         
+        createEnPisee();
+        
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
     }

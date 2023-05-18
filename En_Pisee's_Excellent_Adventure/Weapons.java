@@ -29,6 +29,7 @@ public class Weapons extends Screen
         System.out.println("3) Dark Dagger");
         System.out.println("4) Lighter");
         
+        createEnPisee();
         // Call the 'createButtons()' method to create buttons
         createButtons();
     }

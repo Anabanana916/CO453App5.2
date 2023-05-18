@@ -35,6 +35,8 @@ public class Bomb extends Screen
         System.out.println("3) Give bomb to En Pisee");
         System.out.println("4) Extinguish bomb");
         
+        createEnPisee();
+        
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
     }
@@ -64,7 +66,7 @@ public class Bomb extends Screen
             System.out.println("You hurl the bomb away and it explodes harmlessly.");
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
-            Greenfoot.setWorld(new Gameover());
+            Greenfoot.setWorld(new Climb());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {
@@ -89,7 +91,7 @@ public class Bomb extends Screen
             System.out.println("You use the lid of the lighter to put out the bomb fuse. I have no clue how that worked.");
             
             // Transition to the 'Bomb' world by setting the world to a new instance of 'Bomb'
-            Greenfoot.setWorld(new Bomb());
+            Greenfoot.setWorld(new Climb());
         }
     }
     

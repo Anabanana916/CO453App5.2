@@ -26,9 +26,22 @@ public class Gameover extends Screen
         op1Button = new Buttons("Option1.png");
         addObject(op1Button, 100, 475);
         
-        op2Button = new Buttons("Option2.png");
-        addObject(op2Button, 100, 540);
+        createEnPisee();
         
+    }
+    
+    public void act() {
+        // Method executed continuously during the game
+        
+        // Check if the mouse click occurred on the 'op1Button' object
+        if (Greenfoot.mouseClicked(op1Button)) {
+            // Print "OPTION 1 SELECTED" to the console
+            System.out.println("OPTION 1 SELECTED");
+            
+            // Transition to the 'Village' world by setting the world to a new instance of 'Village'
+            Greenfoot.setWorld(new Main());
+        }
+
     }
     
     public void createEnPisee() {
