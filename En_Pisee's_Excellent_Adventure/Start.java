@@ -67,26 +67,31 @@ public class Start extends Screen
         oldCrone.createPlayerWeapon();
         
         river.createButtons(bomb);
+        river.createGOButtons(gameover);
         river.createEnPisee();
         river.createPlayerWeapon(); //placeholder
         river.createItems(); //placeholder
         
         bomb.createButtons(climb);
+        bomb.createGOButtons(gameover);
         bomb.createEnPisee();
         bomb.createPlayerWeapon(); //placeholder
         bomb.createItems(); //placeholder
         
         climb.createButtons(cave);
+        climb.createGOButtons(gameover);
         climb.createEnPisee();
         climb.createPlayerWeapon(); //placeholder
         climb.createItems(); //placeholder
         
         cave.createButtons(dragon);
+        cave.createGOButtons(gameover);
         cave.createEnPisee();
         cave.createPlayerWeapon(); //placeholder
         cave.createItems(); //placeholder
         
         dragon.createButtons(challenge1);
+        dragon.createGOButtons(gameover);
         dragon.createEnPisee();
         dragon.createPlayerWeapon(); //placeholder
         dragon.createItems(); //placeholder

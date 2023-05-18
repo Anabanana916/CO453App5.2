@@ -25,13 +25,16 @@ public class Bomb extends Screen
         op1Button = new Buttons("Option1.png", climb);
         addObject(op1Button, 100, 475);
         
-        op2Button = new Buttons("Option2.png", climb);
+    }
+    
+    public void createGOButtons(Screen link) {
+        op2Button = new Buttons("Option2.png", link);
         addObject(op2Button, 100, 540);
         
-        op3Button = new Buttons("Option3.png", climb);
+        op3Button = new Buttons("Option3.png", link);
         addObject(op3Button, 275, 475);
         
-        op4Button = new Buttons("Option4.png", climb);
+        op4Button = new Buttons("Option4.png", link);
         addObject(op4Button, 275, 540);
     }
     

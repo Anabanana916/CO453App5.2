@@ -18,6 +18,20 @@ public class Intro extends Screen
         super(800, 600, 1);
     }
     
+        static void intro() {
+        //System.out.println("Hi!");
+        //System.out.println("My name is En Pisee! And this is my game! I will be your narrator for this adventure.");
+        //System.out.println("You! Will be the hero of my story! Making challenging choices, taking horrifying risks,");
+        //System.out.println("and hopefully defeating the evil dragon and beat my game!!");
+        //System.out.println("Are you up for the challenge?");
+        //GreenfootImage text = new GreenfootImage(100, 100);
+        //setImage(text);
+        //text.drawString("Hi! My name is En Pisee, and this is my game");
+        
+        //System.out.println("1) 'Heck yes!!'");
+        //System.out.println("2) 'WTF are you??'");
+    }
+    
         public void createButtons(Screen village) {
         op1Button = new Buttons("Option1.png", village);
         addObject(op1Button, 100, 475);

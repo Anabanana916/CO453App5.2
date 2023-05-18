@@ -26,14 +26,18 @@ public class Cave extends Screen
         op1Button = new Buttons("Option1.png", dragon);
         addObject(op1Button, 100, 475);
         
-        op2Button = new Buttons("Option2.png", dragon);
+    }
+    
+    public void createGOButtons(Screen link) {
+        op2Button = new Buttons("Option2.png", link);
         addObject(op2Button, 100, 540);
         
-        op3Button = new Buttons("Option3.png", dragon);
+        op3Button = new Buttons("Option3.png", link);
         addObject(op3Button, 275, 475);
         
-        op4Button = new Buttons("Option4.png", dragon);
+        op4Button = new Buttons("Option4.png", link);
         addObject(op4Button, 275, 540);
+
     }
     
     public void createEnPisee() {

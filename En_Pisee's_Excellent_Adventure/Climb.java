@@ -22,17 +22,19 @@ public class Climb extends Screen
     }
     
     public void createButtons(Screen cave) {
-        op1Button = new Buttons("Option1.png", cave);
-        addObject(op1Button, 100, 475);
-        
-        op2Button = new Buttons("Option2.png", cave);
-        addObject(op2Button, 100, 540);
-        
-        op3Button = new Buttons("Option3.png", cave);
-        addObject(op3Button, 275, 475);
-        
         op4Button = new Buttons("Option4.png", cave);
         addObject(op4Button, 275, 540);
+    }
+    
+    public void createGOButtons(Screen link) {
+        op1Button = new Buttons("Option1.png", link);
+        addObject(op1Button, 100, 475);
+        
+        op2Button = new Buttons("Option2.png", link);
+        addObject(op2Button, 100, 540);
+        
+        op3Button = new Buttons("Option3.png", link);
+        addObject(op3Button, 275, 475);
     }
     
     public void createEnPisee() {
