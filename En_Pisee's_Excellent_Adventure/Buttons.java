@@ -14,16 +14,10 @@ public class Buttons extends Actor
      */
     private Screen link;
     
-    public Buttons(String image, Screen link){
+    public Buttons(String image){
         setImage(new GreenfootImage(image));
-        this.link = link;
+        
     }
     
-    public void act()
-    {
-        // Add your action code here.
-        if(Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(this.link);
-        }
-    }
+
 }

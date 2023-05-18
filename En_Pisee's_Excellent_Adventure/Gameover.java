@@ -23,10 +23,10 @@ public class Gameover extends Screen
     }
     
     public void createButtons(Screen link) {
-        op1Button = new Buttons("Option1.png", link);
+        op1Button = new Buttons("Option1.png");
         addObject(op1Button, 100, 475);
         
-        op2Button = new Buttons("Option2.png", link);
+        op2Button = new Buttons("Option2.png");
         addObject(op2Button, 100, 540);
         
     }

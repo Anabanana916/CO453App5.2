@@ -12,6 +12,7 @@ public class Start extends Screen
     public Intro intro;
     public Village village;
     public Weapons weapons;
+    //public Items.Weapons weapons;
     public OldCrone oldCrone;
     public River river;
     public Bomb bomb;
@@ -47,69 +48,69 @@ public class Start extends Screen
         
         sneak1 = new Sneak1();
         
-        main.createButtons(intro);
+        main.createButtons();
         
         gameover.createButtons(main);
         gameover.createEnPisee();
         
-        intro.createButtons(village);
+        intro.createButtons();
         intro.createEnPisee();
         
-        village.createButtons(weapons);
+        village.createButtons();
         village.createEnPisee();
         
-        weapons.createButtons(oldCrone);
+        weapons.createButtons();
         weapons.createEnPisee();
         
-        oldCrone.createButtons(river);
+        oldCrone.createButtons();
         oldCrone.createEnPisee();
-        oldCrone.createGOButtons(gameover);
+        
         oldCrone.createPlayerWeapon();
         
-        river.createButtons(bomb);
+        river.createButtons();
         river.createEnPisee();
         river.createPlayerWeapon(); //placeholder
-        river.createItems(); //placeholder
+        //river.createItems(); //placeholder
         
-        bomb.createButtons(climb);
+        bomb.createButtons();
         bomb.createEnPisee();
         bomb.createPlayerWeapon(); //placeholder
-        bomb.createItems(); //placeholder
+        //bomb.createItems(); //placeholder
         
-        climb.createButtons(cave);
+        climb.createButtons();
         climb.createEnPisee();
         climb.createPlayerWeapon(); //placeholder
-        climb.createItems(); //placeholder
+        //climb.createItems(); //placeholder
         
-        cave.createButtons(dragon);
+        cave.createButtons();
         cave.createEnPisee();
         cave.createPlayerWeapon(); //placeholder
-        cave.createItems(); //placeholder
+        //.createItems(); //placeholder
         
-        dragon.createButtons(challenge1);
+        dragon.createButtons();
         dragon.createEnPisee();
         dragon.createPlayerWeapon(); //placeholder
-        dragon.createItems(); //placeholder
+        //dragon.createItems(); //placeholder
         
-        challenge1.createButtons(challenge2);
+        challenge1.createButtons();
         challenge1.createEnPisee();
         challenge1.createPlayerWeapon(); //placeholder
-        challenge1.createItems(); //placeholder
+        //challenge1.createItems(); //placeholder
         
-        challenge2.createButtons(challenge3);
+        challenge2.createButtons();
         challenge2.createEnPisee();
         challenge2.createPlayerWeapon(); //placeholder
-        challenge2.createItems(); //placeholder
+        //challenge2.createItems(); //placeholder
         
-        challenge3.createButtons(neutralEnd);
+        challenge3.createButtons();
         challenge3.createEnPisee();
         challenge3.createPlayerWeapon(); //placeholder
-        challenge3.createItems(); //placeholder
+        //challenge3.createItems(); //placeholder
         
         neutralEnd.createButtons(main);
         neutralEnd.createEnPisee();
         neutralEnd.createPlayerWeapon(); //placeholder
-        neutralEnd.createItems(); //placeholder
+        //neutralEnd.createItems(); //placeholder
         
         Greenfoot.setWorld(main);
     }

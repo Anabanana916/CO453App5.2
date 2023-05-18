@@ -1,28 +1,36 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class Main here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Main extends Screen
-{
-    private Buttons op1Button; //rough code for now
+public class Main extends Screen {
+
+    private Buttons op1Button;
 
     /**
      * Constructor for objects of class Main.
      * 
      */
-    public Main()
-    {
+    public Main() {
         super(800, 600, 1);
+        createButtons();
+        prepare();
     }
-    
-    public void createButtons(Screen link) {
-        op1Button = new Buttons("Option1.png", link);
+
+    public void createButtons() {
+        GreenfootImage buttonImage = new GreenfootImage("Option1.png");
+        op1Button = new Buttons("Option1.png");
         addObject(op1Button, 100, 475);
-        
     }
-    
+
+    public void act() {
+        if (Greenfoot.mouseClicked(op1Button)) {
+            System.out.println("Game Starts");
+            Greenfoot.setWorld(new Intro());
+        }
+    }
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+    }
 }

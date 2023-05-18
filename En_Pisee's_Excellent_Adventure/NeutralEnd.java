@@ -11,7 +11,7 @@ public class NeutralEnd extends Screen
 
     private EnPisee testEnPisee;
     private PlayerWeapon testPlayerWeapon;
-    private Items testItem;
+    private ItemsImages testItem;
     private Buttons op1Button; //rough code for now
     private Buttons op2Button;
     private Buttons op3Button; 
@@ -23,16 +23,16 @@ public class NeutralEnd extends Screen
     }
     
     public void createButtons(Screen main) {
-        op1Button = new Buttons("Option1.png", main);
+        op1Button = new Buttons("Option1.png");
         addObject(op1Button, 100, 475);
         
-        op2Button = new Buttons("Option2.png", main);
+        op2Button = new Buttons("Option2.png");
         addObject(op2Button, 100, 540);
         
-        op3Button = new Buttons("Option3.png", main);
+        op3Button = new Buttons("Option3.png");
         addObject(op3Button, 275, 475);
         
-        op4Button = new Buttons("Option4.png", main);
+        op4Button = new Buttons("Option4.png");
         addObject(op4Button, 275, 540);
     }
     
@@ -47,7 +47,7 @@ public class NeutralEnd extends Screen
     }
     
     public void createItems() {
-        testItem = new Items("Potion.png");
+        testItem = new ItemsImages("Potion.png");
         addObject(testItem, 700, 500);
     }
 }
