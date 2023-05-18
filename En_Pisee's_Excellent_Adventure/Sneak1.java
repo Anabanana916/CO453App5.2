@@ -52,7 +52,7 @@ public class Sneak1 extends Screen
             System.out.println("OPTION 2 SELECTED");
             System.out.println("You duck behind a pile of treasure. The Dragon takes a moment, before return to it's");
             System.out.println("rest.");
-            Greenfoot.setWorld(new Sneak2());
+            //Greenfoot.setWorld(new Sneak2());
         }
         if (Greenfoot.mouseClicked(op3Button)) {
             System.out.println("OPTION 3 SELECTED");
