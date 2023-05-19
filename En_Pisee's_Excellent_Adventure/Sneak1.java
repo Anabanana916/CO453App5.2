@@ -17,6 +17,7 @@ public class Sneak1 extends Screen
     private Buttons op1Button;
     private Buttons op2Button;
     private Buttons op3Button;
+    private PlayerWeapon testPlayerWeapon;
     
     // Sneak1 class constructor
     public Sneak1()
@@ -24,12 +25,11 @@ public class Sneak1 extends Screen
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
         
-        // Print the introduction and choices for the sneak challenge to the console
-        System.out.println("You get behind the dragon, but you knock over some coins! The sound causes the dragon");
-        System.out.println("to raise its head suddenly and start looking around.");
-        System.out.println("1) Freeze");
-        System.out.println("2) Hide");
-        System.out.println("3) Say Hi");
+        showText("You get behind the dragon, but you knock over some coins! The sound causes", 400, 20);
+        showText("the dragon to raise its head suddenly and start looking around.", 400, 40);
+        showText("1) Freeze", 200, 130);
+        showText("2) Hide", 600, 130);
+        showText("3) 'Hi!'", 200, 160);
         
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
@@ -53,28 +53,25 @@ public class Sneak1 extends Screen
         // Check if the mouse click occurred on each button and perform corresponding actions based on the selected option
         
         if (Greenfoot.mouseClicked(op1Button)) {
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("You once heard that a dragon's vision is based on movement.");
-            System.out.println("You heard wrong.");
-            System.out.println("The Dragon crushes you with its tail.");
+            showText("OPTION 1 SELECTED: You once heard that a dragon's vision is based", 400, 40);
+            showText("on movement. You heard wrong. The Dragon crushes you with its.", 400, 60);
+            showText("tail.", 400, 80);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("You duck behind a pile of treasure. The Dragon takes a moment, before returning to its rest.");
+            showText("OPTION 2 SELECTED: You duck behind a pile of treasure. The Dragon", 400, 40);
+            showText("takes a moment, before returning to its rest.", 400, 80);
             
             // Transition to the next sneak challenge (Sneak2) by creating a new instance of 'Sneak2' world
             Greenfoot.setWorld(new Sneak2());
         }
         
         if (Greenfoot.mouseClicked(op3Button)) {
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("The Dragon looks at you, bewildered. Then smiles.");
-            System.out.println("'Goodbye.'");
-            System.out.println("It blasts you with its lightning breath.");
+            showText("OPTION 3 SELECTED: The Dragon looks at you, bewildered. Then smiles.", 400, 40);
+            showText("'Goodbye.' It blasts you with its lightning breath.", 400, 60);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
@@ -88,6 +85,14 @@ public class Sneak1 extends Screen
         
         // Add the 'testEnPisee' object to the world at coordinates (200, 200)
         addObject(testEnPisee, 200, 200);
+    }
+    
+    public void createPlayerWeapon() {
+        // Create an instance of the 'PlayerWeapon' class named 'testPlayerWeapon' with the image "Shield.png"
+        testPlayerWeapon = new PlayerWeapon("Shield.png");
+        
+        // Add the 'testPlayerWeapon' object to the world at coordinates (500, 500)
+        addObject(testPlayerWeapon, 500, 500);
     }
 }
 

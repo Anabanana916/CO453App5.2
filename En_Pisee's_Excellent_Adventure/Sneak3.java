@@ -17,6 +17,7 @@ public class Sneak3 extends Screen
     private Buttons op1Button;
     private Buttons op2Button;
     private Buttons op3Button;
+    private PlayerWeapon testPlayerWeapon;
     
     // Sneak3 class constructor
     public Sneak3()
@@ -24,12 +25,12 @@ public class Sneak3 extends Screen
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
         
-        // Print the introduction and choices for the sneak challenge to the console
-        System.out.println("You manage to reach the soft belly of the best. The Dragon, still sleeping and");
-        System.out.println("unaware of your presence. Prey to your next decision.");
-        System.out.println("1) Gut");
-        System.out.println("2) Tickle");
-        System.out.println("3) Stab");
+        // Print the introduction and choices for the sneak challenge to the console        
+        showText("You manage to reach the soft belly of the best. The Dragon, still sleeping ", 400, 20);
+        showText("and unaware of your presence. Prey to your next decision", 400, 40);
+        showText("1) Gut", 200, 130);
+        showText("2) Tickle", 600, 130);
+        showText("3) Stab", 200, 160);
         
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
@@ -53,40 +54,23 @@ public class Sneak3 extends Screen
         // Check if the mouse click occurred on each button and perform corresponding actions based on the selected option
         
         if (Greenfoot.mouseClicked(op1Button)) {
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("You slide your dagger into the belly and begin running. Cutting a gaping");
-            System.out.println("hole in their stomach. The Dragon cries out in pain. It rolls over to");
-            System.out.println("see what happened which cause it's insides to fall out of it's body. It");
-            System.out.println("gasps in horror and as the light leaves it's eyes, the last thing it sees");
-            System.out.println("is the beast who did this to them. You slew the dragon, but upon taking in");
-            System.out.println("the immense pile of treasure in this cave, you make a decision. You take");
-            System.out.println("the Dragon's place. The village you, seemingly, set out to save is now your");            
-            System.out.println("victim. They now must all give their valuables and food to you. They only");
-            System.out.println("live because you see fit for them to live to serve your needs. Your legend");
-            System.out.println("set, as the beast who slew a dragon.");
-
+            showText("OPTION 1 SELECTED", 400, 40);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
-            // Greenfoot.setWorld(new Sneak3());
+            Greenfoot.setWorld(new EvilEnding());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("You begin tickling the beast. It erupts in roars of laughter! In it's");
-            System.out.println(" uncontrollable laughter, it rolls over and crushes you.");
-            
+            showText("OPTION 2 SELECTED: You begin tickling the beast. It erupts in roars of laughter!", 400, 40);
+            showText("In it's uncontrollable laughter, it rolls over and crushes you", 400, 60);
             // Transition to the next sneak challenge (Sneak3) by creating a new instance of 'Sneak2' world
             Greenfoot.setWorld(new Gameover());
         }
         
-        if (Greenfoot.mouseClicked(op3Button)) {
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("You stab your dagger into the beast. It's head snaps up and whirls");
-            System.out.println("around to face you");
-            System.out.println("'Ow!' It says, sounding heavily insulted. It blasts you with it's");
-            System.out.println("lightening breath. Frying you to a crisp before returning to it's");
-            System.out.println("rest.");
-            
+        if (Greenfoot.mouseClicked(op3Button)) {          
+            showText("OPTION 3 SELECTED: You stab your dagger into the beast. It's head snaps up", 400, 40);
+            showText("and whirls around to face you. 'Ow!' It says, sounding heavily insulted. It", 400, 60);
+            showText("blasts you with its lightening breath. Frying you to a crisp.", 400, 80);
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
@@ -99,6 +83,14 @@ public class Sneak3 extends Screen
         
         // Add the 'testEnPisee' object to the world at coordinates (200, 200)
         addObject(testEnPisee, 200, 200);
+    }
+    
+    public void createPlayerWeapon() {
+        // Create an instance of the 'PlayerWeapon' class named 'testPlayerWeapon' with the image "Shield.png"
+        testPlayerWeapon = new PlayerWeapon("Shield.png");
+        
+        // Add the 'testPlayerWeapon' object to the world at coordinates (500, 500)
+        addObject(testPlayerWeapon, 500, 500);
     }
 }
 

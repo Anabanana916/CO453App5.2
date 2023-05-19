@@ -25,8 +25,10 @@ public class Start extends Screen
     public Challenge3 challenge3;
     public NeutralEnd neutralEnd;
     public Gameover gameover;
-    
     public Sneak1 sneak1;
+    public Sneak2 sneak2;
+    public Sneak3 sneak3;
+    public EvilEnding evilEnding;
     
     public Start()
     {
@@ -46,8 +48,10 @@ public class Start extends Screen
         challenge3 = new Challenge3();
         neutralEnd = new NeutralEnd();
         gameover = new Gameover();
-        
+        evilEnding = new EvilEnding();
         sneak1 = new Sneak1();
+        sneak2 = new Sneak2();
+        sneak3 = new Sneak3();
         
         main.createButtons();
         
@@ -108,10 +112,26 @@ public class Start extends Screen
         challenge3.createPlayerWeapon(); //placeholder
         //challenge3.createItems(); //placeholder
         
+        sneak1.createButtons();
+        sneak1.createEnPisee();
+        sneak1.createPlayerWeapon(); //placeholder
+        //challenge1.createItems(); //placeholder
+        
+        sneak2.createButtons();
+        sneak2.createEnPisee();
+        sneak2.createPlayerWeapon(); //placeholder
+        //challenge2.createItems(); //placeholder
+        
+        sneak3.createButtons();
+        sneak3.createEnPisee();
+        sneak3.createPlayerWeapon(); //placeholder
+        //challenge3.createItems(); //placeholder
+        
         neutralEnd.createButtons(main);
         neutralEnd.createEnPisee();
-        neutralEnd.createPlayerWeapon(); //placeholder
-        //neutralEnd.createItems(); //placeholder
+        
+        evilEnding.createButtons(main);
+        evilEnding.createEnPisee();
         
         Greenfoot.setWorld(main);
     }

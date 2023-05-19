@@ -29,12 +29,12 @@ public class Climb extends Screen
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
         
-        // Print the introduction and choices for climbing the cliff to the console
-        System.out.println("You start getting closer to the cave, but the only way to get to the cave seems to be up");
-        System.out.println("a dangerous cliff side. What do you do?");
-        System.out.println("1) Scale unsafe cliff side");
-        System.out.println("2) Take the scenic route");
-        System.out.println("3) Wait for a lift");
+        // Print the introduction and choices for climbing the cliff to the console        
+        showText("You start getting closer to the cave, but the only way to get to the cave seems", 400, 20);
+        showText("to be up a dangerous cliff side. What do you do?", 400, 40);
+        showText("1) Scale unsafe cliff side", 200, 130);
+        showText("2) Take the scenic route", 600, 130);
+        showText("3) Wait for a lift", 200, 160);
         
         createEnPisee();
         
@@ -54,8 +54,6 @@ public class Climb extends Screen
         op3Button = new Buttons("Option3.png");
         addObject(op3Button, 275, 475);
         
-        op4Button = new Buttons("Option4.png");
-        addObject(op4Button, 275, 540);
     }
     
     // Method that is called continuously by Greenfoot for the actor to perform actions
@@ -63,24 +61,23 @@ public class Climb extends Screen
         // Check if the mouse click occurred on each button and perform corresponding actions based on the selected option
         
         if (Greenfoot.mouseClicked(op1Button)) {
-            System.out.println("You attempt to scale the cliff, but a rock breaks as you push off and you fall and");
-            System.out.println("become a pizza splat on the ground.");
+            showText("OPTION 1 SELECTED: You attempt to scale the cliff, but a rock breaks as you push off and", 400, 40);
+            showText("you fall and become a pizza splat on the ground.", 400, 40);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("You take the scenic route. Taking in the beautiful views as you safely make your way to the top.");
+            showText("OPTION 2 SELECTED: You take the scenic route. Taking in the beautiful views as you safely make", 400, 40);
+            showText("your way to the top.", 400, 40);
             
             // Transition to the 'Cave' world by setting the world to a new instance of 'Cave'
             Greenfoot.setWorld(new Cave());
         }
         
         if (Greenfoot.mouseClicked(op3Button)) {
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("You wait for a lift, and a rock squishes you flat.");
+            showText("OPTION 3 SELECTED: You wait for a lift, and a rock squishes you flat.", 400, 40);            
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());

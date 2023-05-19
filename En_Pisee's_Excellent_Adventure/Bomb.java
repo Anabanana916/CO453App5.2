@@ -27,13 +27,11 @@ public class Bomb extends Screen
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
         
-        // Print the introduction and choices for dealing with a lit bomb to the console
-        System.out.println("You venture on. Eventually, coming across an ornate chest! You open the chest and reach inside an-");
-        System.out.println("OH MY GOD!!! IT'S A LIT BOMB!! Quick! Throw it away!!");
-        System.out.println("1) Throw bomb");
-        System.out.println("2) Hold on to bomb");
-        System.out.println("3) Give bomb to En Pisee");
-        System.out.println("4) Extinguish bomb");
+        // Print the introduction and choices for dealing with a lit bomb to the console        
+        showText("You venture on. Eventually, coming across an ornate chest! You open the chest", 400, 20);
+        showText("and reach inside an- OH MY GOD!!! IT'S A LIT BOMB!! Quick! Throw it away!!", 400, 40);
+        showText("1) Throw bomb", 200, 130);
+        showText("2) Hold on to bomb", 600, 130);
         
         createEnPisee();
         
@@ -50,11 +48,6 @@ public class Bomb extends Screen
         op2Button = new Buttons("Option2.png");
         addObject(op2Button, 100, 540);
         
-        op3Button = new Buttons("Option3.png");
-        addObject(op3Button, 275, 475);
-        
-        op4Button = new Buttons("Option4.png");
-        addObject(op4Button, 275, 540);
     }
     
     // Method that is called continuously by Greenfoot for the actor to perform actions
@@ -62,37 +55,20 @@ public class Bomb extends Screen
         // Check if the mouse click occurred on each button and perform corresponding actions based on the selected option
         
         if (Greenfoot.mouseClicked(op1Button)) {
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("You hurl the bomb away and it explodes harmlessly.");
+            showText("OPTION 1 SELECTED: You hurl the bomb away and it explodes harmlessly.", 400, 40);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Climb());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("What? Why would yo-\n");
-            System.out.println("The bomb explodes in your hands. Sending pieces of you flying everywhere.");
+            showText("OPTION 2 SELECTED: What? Why would yo-", 400, 40);
+            showText("The bomb explodes in your hands. Sending pieces of you flying everywhere.", 400, 40);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
-        if (Greenfoot.mouseClicked(op3Button)) {
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("huh? what????");
-            
-            // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
-            Greenfoot.setWorld(new Gameover());
-        }
-        
-        if (Greenfoot.mouseClicked(op4Button)) {
-            System.out.println("OPTION 4 SELECTED");
-            System.out.println("You use the lid of the lighter to put out the bomb fuse. I have no clue how that worked.");
-            
-            // Transition to the 'Bomb' world by setting the world to a new instance of 'Bomb'
-            Greenfoot.setWorld(new Climb());
-        }
     }
     
     // Method to create the 'EnPisee' object

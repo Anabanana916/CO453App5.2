@@ -27,13 +27,12 @@ public class Dragon extends Screen
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
         
-        // Print the introduction and choices for the Dragon's lair to the console
-        System.out.println("Finally, you reach the Dragon's lair. The hulking beast lays resting atop its hoard.");
-        System.out.println("How do you approach?");
-        System.out.println("1) Insult the dragon");
-        System.out.println("2) Challenge");
-        System.out.println("3) Drink potion");
-        System.out.println("4) Sneak up to dragon");
+        // Print the introduction and choices for the Dragon's lair to the console        
+        showText("Finally, you reach the Dragon's lair. The hulking beast lays resting atop its", 400, 20);
+        showText("hoard. How do you approach?", 400, 40);
+        showText("1) Insult the dragon", 200, 130);
+        showText("2) Challenge", 600, 130);
+        showText("3) Sneak up to dragon", 200, 160);
         
         createEnPisee();
         
@@ -53,8 +52,6 @@ public class Dragon extends Screen
         op3Button = new Buttons("Option3.png");
         addObject(op3Button, 275, 475);
         
-        op4Button = new Buttons("Option4.png");
-        addObject(op4Button, 275, 540);
     }
     
     // Method that is called continuously by Greenfoot for the actor to perform actions
@@ -62,43 +59,29 @@ public class Dragon extends Screen
         // Check if the mouse click occurred on each button and perform corresponding actions based on the selected option
         
         if (Greenfoot.mouseClicked(op1Button)) {
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("'WAKE UP YOU SCALEY GIT!' You yell. The Dragon opens one eye, looks at you,");
-            System.out.println("and with a yawn opens its maw and blasts you with its fiery breath. Killing");
-            System.out.println("you instantly.");
+            showText("OPTION 1 SELECTED: 'WAKE UP YOU SCALEY GIT!' You yell. The Dragon opens one", 400, 40);
+            showText("eye, looks at you, and with a yawn opens its maw and blasts you with", 400, 60);
+            showText("its lightening breath. Killing you instantly.", 400, 80);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("'I challenge thee, vile beast!' You bellow.");
+            showText("OPTION 2 SELECTED: 'I challenge thee, vile beast!' You bellow.", 400, 40);
             
             // Transition to the 'Challenge1' world by setting the world to a new instance of 'Challenge1'
             Greenfoot.setWorld(new Challenge1());
         }
         
-        if (Greenfoot.mouseClicked(op3Button)) {
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("You chug the entirety of your potion, throw the glass down on the ground");
-            System.out.println("and yell 'Awaken, vile beast! You shall not torment the good people of that");
-            System.out.println("village any longer!'");
-            
-            // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
-            Greenfoot.setWorld(new Gameover());
-        }
-        
-        if (Greenfoot.mouseClicked(op4Button)) {
-            System.out.println("OPTION 4 SELECTED");
-            System.out.println("You duck down low and cautiously make your way behind the dragon. However,");
-            System.out.println("you trip on an unseen rock and collapse onto the treasure. You hope the noise");
-            System.out.println("did not wake the beast. You look up to see it staring down at you. 'Nice try.'");
-            System.out.println("It scoffs before biting and swallowing you whole.");
+        if (Greenfoot.mouseClicked(op3Button)) {            
+            showText("OPTION 3 SELECTED: You duck down low and cautiously make your way behind the", 400, 40);
+            showText("dragon.", 400, 60);
             
             // Transition to the 'Sneak1' world by setting the world to a new instance of 'Sneak1'
             Greenfoot.setWorld(new Sneak1());
         }
+        
     }
     
     // Method to create the 'EnPisee' object

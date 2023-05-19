@@ -22,16 +22,18 @@ public class OldCrone extends Screen
         super(800, 600, 1);
         
         // Print the introduction and choices for interacting with the old crone to the console
-        System.out.println("You venture toward the Dragon's cave. An old crone approaches you, offering you");
-        System.out.println("aid. Do you accept?");
-        System.out.println("1) Accept");
-        System.out.println("2) Ignore");
-        System.out.println("3) Berate");
+        showText("You venture toward the Dragon's cave. An old crone approaches you, offering you", 400, 20);
+        showText("aid. Do you accept?", 400, 40);
+        showText("1) Accept", 200, 130);
+        showText("2) Ignore", 600, 130);
+        showText("3) Berate", 200, 160);
+        
         
         createEnPisee();
         
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
+        createPlayerWeapon();
     }
     
     public void createButtons() {
@@ -62,8 +64,7 @@ public class OldCrone extends Screen
         // Check if the mouse click occurred on the 'op1Button' object
         if (Greenfoot.mouseClicked(op1Button)) {
             // Print "OPTION 1 SELECTED" to the console
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("She hands you a potion. It glows with a mysterious power. You store it for later.");
+            showText("OPTION 1 SELECTED: She hands you a potion. It glows with a mysterious power.", 100, 400);
             
             // Transition to the 'River' world by setting the world to a new instance of 'River'
             Greenfoot.setWorld(new River());
@@ -72,8 +73,7 @@ public class OldCrone extends Screen
         // Check if the mouse click occurred on the 'op2Button' object
         if (Greenfoot.mouseClicked(op2Button)) {
             // Print "OPTION 2 SELECTED" to the console
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("You ignore the crone. She smelt funny anyway.");
+            showText("OPTION 2 SELECTED: You ignore the crone. She smelt funny anyway.", 100, 400);
             
             // Transition to the 'River' world by setting the world to a new instance of 'River'
             Greenfoot.setWorld(new River());
@@ -82,11 +82,10 @@ public class OldCrone extends Screen
         // Check if the mouse click occurred on the 'op3Button' object
         if (Greenfoot.mouseClicked(op3Button)) {
             // Print "OPTION 3 SELECTED" to the console
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("'Be gone from my sight, you foul smelling wench!' You sneer. The crone");
-            System.out.println("smiles. Her yellow teeth showing the many years of dental neglect as a");
-            System.out.println("strange, green smoke surrounds the pair of you. You feel strange. Prickly");
-            System.out.println("even. You can't see, but you have been turned into a cactus.");
+            showText("OPTION 3 SELECTED: 'Be gone from my sight, you foul smelling wench!' You sneer. The crone", 400, 20);
+            showText("smiles. Her yellow teeth showing the many years of dental neglect as a", 400, 40);
+            showText("strange, green smoke surrounds the pair of you. You feel strange. Prickly", 400, 60);
+            showText("even. You can't see, but you have been turned into a cactus.", 400, 80);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());

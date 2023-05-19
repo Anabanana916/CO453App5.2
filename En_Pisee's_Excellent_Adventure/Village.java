@@ -29,24 +29,23 @@ public class Village extends Screen
         createButtons();
         
         // Print the introduction and choices for the village scenario to the console
-        System.out.println("You, in a world of dragons and knights in shining armor, find yourself in a village.");
-        System.out.println("The village people are tired and ragged. Labouring long hours to appease the great,");
-        System.out.println("blue dragon who oversees the village. It demands that all food and precious materials");
-        System.out.println("of the village be given to them. The villagers are barely able to keep themselves alive");
-        System.out.println("whilst keeping the dragon from killing them all.");
-        System.out.println("1) 'No, seriously. WTF are you?'");
-        System.out.println("2) Take pity on the villagers");
-        System.out.println("3) Sympathize with the villagers");
-        System.out.println("4) Look at them in disgust");
-        System.out.print(">  ");
+        showText("In a world of dragons and knights in shining armor, you find yourself in a", 400, 20);
+        showText("village. The villagers are tired and ragged. Labouring long hours to appease", 400, 40);
+        showText("the great, blue dragon who oversees the village. It demands that all food", 400, 60);
+        showText("and precious materials be given to them. The villagers are barely able to", 400, 80);
+        showText("keep themselves alive whilst keeping the dragon from killing them all.", 400, 100);
+        showText("1) 'No, seriously. WTF are you?'", 200, 130);
+        showText("2) Take pity on the villagers", 600, 130);
+        showText("3) Sympathize with the villagers", 200, 160);
+        showText("4) Look at them in disgust", 600, 160);
         
         createEnPisee();
         
         // Check if the value of 'i' is 5
         if (i == 5) {
             // NPC leaves ending
-            System.out.println("Ok! That does it!! If you're just going to be rude! I won't tell you my excellent story.");
-            System.out.println("Goodbye!!");
+            showText("Ok! That does it!! If you're just going to be rude! I won't tell you my", 400, 20);
+            showText("excellent story. Goodbye!!", 400, 40);
             // gameOver();
         }
     }
@@ -81,8 +80,7 @@ public class Village extends Screen
         // Check if the mouse click occurred on the 'op1Button' object
         if (Greenfoot.mouseClicked(op1Button)) {
             // Print "OPTION 1 SELECTED" to the console
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("1)'No, seriously. WTF are you?'");
+            showText("OPTION 1 SELECTED:'No, seriously. WTF are you?'", 100, 400);
             
             // Increment the value of 'i' by 1
             i = i + 1;
@@ -94,8 +92,7 @@ public class Village extends Screen
         // Check if the mouse click occurred on the 'op2Button' object
         if (Greenfoot.mouseClicked(op2Button)) {
             // Print "OPTION 2 SELECTED" to the console
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("2) Take pity on the villagers");
+            showText("OPTION 2 SELECTED", 100, 400);
             
             // Set the value of 'i' to 6
             i = 6;
@@ -107,8 +104,7 @@ public class Village extends Screen
         // Check if the mouse click occurred on the 'op3Button' object
         if (Greenfoot.mouseClicked(op3Button)) {
             // Print "OPTION 3 SELECTED" to the console
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("3) Sympathize with the villagers");
+            showText("OPTION 3 SELECTED", 100, 400);
             
             // Set the value of 'i' to 6
             i = 6;
@@ -120,8 +116,7 @@ public class Village extends Screen
         // Check if the mouse click occurred on the 'op4Button' object
         if (Greenfoot.mouseClicked(op4Button)) {
             // Print "OPTION 4 SELECTED" to the console
-            System.out.println("OPTION 4 SELECTED");
-            System.out.println("4) Look at them in disgust");
+            showText("OPTION 4 SELECTED", 100, 400);
             
             // Set the value of 'i' to 6
             i = 6;

@@ -27,13 +27,13 @@ public class Challenge1 extends Screen
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
         
-        // Print the introduction and choices for the challenge to the console
-        System.out.println("The Dragon stands atop its hoard, staring you down. Its chest inflates and its eyes");
-        System.out.println("glow an electric blue as it readies its lightning breath toward you.");
-        System.out.println("1) Dodge");
-        System.out.println("2) Charge");
-        System.out.println("3) Dance off");
-        System.out.println("4) Just a joke bro!");
+        // Print the introduction and choices for the challenge to the console        
+        showText("The Dragon stands atop its hoard, staring you down. Its chest inflates and", 400, 20);
+        showText("its eyes glow an electric blue as it readies its lightning breath", 400, 40);
+        showText("1) Dodge", 200, 130);
+        showText("2) Charge", 600, 130);
+        showText("3) Dance off", 200, 160);
+        showText("4) Just a joke bro!", 600, 160);
         
         createEnPisee();
         
@@ -62,37 +62,35 @@ public class Challenge1 extends Screen
         // Check if the mouse click occurred on each button and perform corresponding actions based on the selected option
         
         if (Greenfoot.mouseClicked(op1Button)) {
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("You run toward the dragon, diving to the left and narrowly missing the Dragon's");
-            System.out.println("lightning breath as it sizzles past you.");
+            showText("OPTION 1 SELECTED: You run toward the dragon, diving to the left and narrowly", 400, 40);
+            showText("missing the Dragon's lightning breath as it sizzles past you.", 400, 60);
             
             // Transition to the 'Challenge2' world by setting the world to a new instance of 'Challenge2'
             Greenfoot.setWorld(new Challenge2());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("You charge the Dragon, bellowing a battle cry. The Dragon rears back and electrocutes");
-            System.out.println("you with its lightning breath, turning you to ash before you even get close.");
+            showText("OPTION 2 SELECTED: You charge the Dragon, bellowing a battle cry. The Dragon", 400, 40);
+            showText("rears back and electrocutes you with its lightning breath, turning you to ash", 400, 80);
+            showText("before you even get close.", 400, 100);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
-        if (Greenfoot.mouseClicked(op3Button)) {
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("You start dancing. Your moves, incredible. Timing, immaculate. It's almost as if");
-            System.out.println("dancing was your true calling. The dragon crushes you with its colossal tail mid");
-            System.out.println("dance. It's a dragon fight! Not a dance contest.");
+        if (Greenfoot.mouseClicked(op3Button)) {            
+            showText("OPTION 3 SELECTED: You start dancing. Your moves, incredible. Timing, immaculate.", 400, 40);
+            showText("It's almost as if dancing was your true calling. The dragon crushes you with its", 400, 80);
+            showText("colossal tail mid. dance. It's a dragon fight! Not a dance contest.", 400, 100);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op4Button)) {
-            System.out.println("OPTION 4 SELECTED");
-            System.out.println("With a look of disappointment, the dragon sighs and slaps you with its mighty claw.");
-            System.out.println("Sending you flying into the cave wall and killing you on impact.");
+            showText("OPTION 4 SELECTED: With a look of disappointment, the dragon sighs and slaps you", 400, 40);
+            showText("with its mighty claw. Sending you flying into the cave wall and killing you on", 400, 80);
+            showText("impact.", 400, 100);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());

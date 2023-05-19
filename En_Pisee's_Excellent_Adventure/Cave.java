@@ -28,13 +28,12 @@ public class Cave extends Screen
         super(800, 600, 1);
         
         // Print the introduction and choices for the cave scene to the console
-        System.out.println("You reach the Dragon's cave. Walking through the dark tunnels, you find it hard to");
-        System.out.println("navigate through. You trip on a rock that you didn't see, and 100 red eyes appear");
-        System.out.println("from the ceiling. A swarm of bats charge towards you!");
-        System.out.println("1) Say hi to bats");
-        System.out.println("2) Use weapon on broken wall");
-        System.out.println("3) Run through dangerous cave");
-        System.out.print(">  ");
+        showText("You reach the Dragon's cave. Walking through the dark tunnels, you find it", 400, 20);
+        showText("hard to navigate through. You trip on a rock that you didn't see, and 100", 400, 40);
+        showText(" red eyes appear from the ceiling. A swarm of bats charge towards you!", 400, 40);
+        showText("1) Say hi to bats", 200, 130);
+        showText("2) Use weapon on broken wall", 600, 130);
+        showText("3) Run through dangerous cave", 200, 160);
         
         createEnPisee();
         
@@ -60,25 +59,24 @@ public class Cave extends Screen
         // Check if the mouse click occurred on each button and perform corresponding actions based on the selected option
         
         if (Greenfoot.mouseClicked(op1Button)) {
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("You are swarmed by the bats. When they finally leave, the only thing left of you is a skeleton.");
+            showText("OPTION 1 SELECTED: You are swarmed by the bats. When they finally leave,", 400, 40);
+            showText("the only thing left of you is a skeleton.", 400, 40);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("You take your weapon and break a nearby wall and get away from the bats.");
+            showText("OPTION 2 SELECTED: You take your weapon and break a nearby wall and get", 400, 40);
+            showText("away from the bats.", 400, 40);
             
             // Transition to the 'Dragon' world by setting the world to a new instance of 'Dragon'
             Greenfoot.setWorld(new Dragon());
         }
         
         if (Greenfoot.mouseClicked(op3Button)) {
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("You run through the dark cave, running into a wall and causing a stalagmite...");
-            System.out.println("stalactite? One of those pointy rock thingies to fall on top of you.");
+            showText("OPTION 3 SELECTED: You run through the dark cave, running into a wall and causing a", 400, 40);
+            showText("stalagmite... stalactite? One of those pointy rock thingies to fall on top of you.", 400, 40);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());

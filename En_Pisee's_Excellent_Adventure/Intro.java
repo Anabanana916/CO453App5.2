@@ -11,6 +11,7 @@ public class Intro extends Screen {
     private Buttons op1Button;
     private Buttons op2Button;
     
+    TextBox textbox= new TextBox("Cheese");
     
     public Intro() {
         // Constructor for the 'Intro' class
@@ -18,14 +19,13 @@ public class Intro extends Screen {
         super(800, 600, 1);
         
         // Print introductory messages to the console
-        System.out.println("Hi!");
-        System.out.println("My name is En Pisee! And this is my game! I will be your narrator for this adventure.");
-        System.out.println("You! Will be the hero of my story! Making challenging choices, taking horrifying risks,");
-        System.out.println("and hopefully defeating the evil dragon and beating my game!!");
-        System.out.println("Are you up for the challenge?");
-        System.out.println("1) 'Heck yes!!'");
-        System.out.println("2) 'WTF are you??'");
-        System.out.print("> ");
+        showText("Hi! My Name is En Pisee! And this is my game and I shall be your narrator for", 400, 20);
+        showText("this adventure. You! Will be the hero of my story! Making challenging choices,", 400, 40);
+        showText("taking horrifying risks, and hopefully defeating the evil dragon and", 400, 60);
+        showText("beating my game!!",400, 60);
+        showText("Are you up for the challenge?", 400, 80);
+        showText("1) 'Heck yes!!'", 200, 120);
+        showText("2) 'WTF are you??'", 600, 120);
         
         // Call the 'createEnPisee()' method to create the EnPisee character
         createEnPisee();
@@ -56,7 +56,7 @@ public class Intro extends Screen {
         // Check if the mouse click occurred on the 'op1Button' object
         if (Greenfoot.mouseClicked(op1Button)) {
             // Print "OPTION 1 SELECTED" to the console
-            System.out.println("OPTION 1 SELECTED");
+            showText("OPTION 1 SELECTED", 100, 400);
             
             // Transition to the 'Village' world by setting the world to a new instance of 'Village'
             Greenfoot.setWorld(new Village());
@@ -65,7 +65,7 @@ public class Intro extends Screen {
         // Check if the mouse click occurred on the 'op2Button' object
         if (Greenfoot.mouseClicked(op2Button)) {
             // Print "OPTION 2 SELECTED" to the console
-            System.out.println("OPTION 2 SELECTED");
+            showText("OPTION 2 SELECTED", 100, 400);
             
             // Transition to the 'Village' world by setting the world to a new instance of 'Village'
             Greenfoot.setWorld(new Village());

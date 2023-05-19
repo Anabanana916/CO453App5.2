@@ -28,13 +28,11 @@ public class Challenge2 extends Screen
         super(800, 600, 1);
         
         // Print the introduction and choices for the challenge to the console
-        System.out.println("The Dragon growls. How dare this intruder insult them by not dying faster. They whirl around,");
-        System.out.println("their tail heading straight for you.");
-        
-        System.out.println("1) Strike");
-        System.out.println("2) Dodge");
-        System.out.println("3) Leap");
-        
+        showText("The Dragon growls. How dare this intruder insult them by not dying faster.", 400, 20);
+        showText("They whirl around, their tail heading straight for you.", 400, 40);
+        showText("1) Strike", 200, 130);
+        showText("2) Dodge", 600, 130);
+        showText("3) Leap", 200, 160);        
         
         createEnPisee();
         
@@ -60,28 +58,25 @@ public class Challenge2 extends Screen
         // Check if the mouse click occurred on each button and perform corresponding actions based on the selected option
         
         if (Greenfoot.mouseClicked(op1Button)) {
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("You swing your mighty weapon, carving through the tail, causing the Dragon to");
-            System.out.println("cry out in agony.");
+            showText("OPTION 1 SELECTED: You swing your mighty weapon, carving through the tail", 400, 40);
+            showText("causing the Dragon to cry out in agony.", 400, 80);
             
             // Transition to the 'Challenge2' world by setting the world to a new instance of 'Challenge2'
-            Greenfoot.setWorld(new Challenge2());
+            Greenfoot.setWorld(new Challenge3());
         }
         
-        if (Greenfoot.mouseClicked(op2Button)) {
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("You drop and slide under the tail, narrowly avoiding the tail as you feel the air");
-            System.out.println("rush over you from the tail swipe.");
+        if (Greenfoot.mouseClicked(op2Button)) {            
+            showText("OPTION 2 SELECTED: You drop and slide under the tail, narrowly avoiding", 400, 40);
+            showText("the tail as you feel the air rush over you from the tail swipe.", 400, 80);
             
             // Transition to the 'Challenge2' world by setting the world to a new instance of 'Challenge2'
-            Greenfoot.setWorld(new Challenge2());
+            Greenfoot.setWorld(new Challenge3());
         }
         
         if (Greenfoot.mouseClicked(op3Button)) {
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("You leap into the air and get smacked by the tail. You fly into the air and just");
-            System.out.println("before you splat into the cave wall, you swear you hear the Dragon say 'HOME RUN!'.");
-            System.out.println("You then coat the wall in a new color called 'hint of internal organs'.");
+            showText("OPTION 3 SELECTED: You leap into the air and get smacked by the tail. You", 400, 40);
+            showText("fly into the air and just before you splat into the cave wall coating the", 400, 60);
+            showText(" wall in a new color called 'hint of internal organs", 400, 80);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());

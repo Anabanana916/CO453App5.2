@@ -29,17 +29,18 @@ public class River extends Screen
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
         
-        // Print the introduction and choices for crossing the river to the console
-        System.out.println("You leave the village and come across a river. The current is strong. You can see the water");
-        System.out.println("crashing into the rocks. What do you do?");
-        System.out.println("1) Swim through");
-        System.out.println("2) Grab a nearby person and use them to get across");
-        System.out.println("3) Hop across rocks");
-        System.out.println("4) Take the bridge");
+        // Print the introduction and choices for crossing the river to the console        
+        showText("You leave the village and come across a river. The current is strong. You can", 400, 20);
+        showText("see the water crashing into the rocks. What do you do?", 400, 40);
+        showText("1) Swim through", 200, 130);
+        showText("2) Use a nearby person to get across", 600, 130);
+        showText("3) Hop across rocks", 200, 160);
+        showText("4) Take the bridge", 600, 160);
         
         createEnPisee();
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
+        createPlayerWeapon();
     }
     
     // Method to create buttons for the choices
@@ -63,32 +64,29 @@ public class River extends Screen
         // Check if the mouse click occurred on each button and perform corresponding actions based on the selected option
         
         if (Greenfoot.mouseClicked(op1Button)) {
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("You jump into the water. The current carries you away, causing you to drown.");
+            showText("OPTION 1 SELECTED: You jump into the water. The current carries you away, causing you to drown.", 400, 40);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("You grab a nearby villager and attempt to use him as a raft. You both drown. No clue what you were expecting here.");
+            showText("OPTION 2 SELECTED: You grab a nearby villager and attempt to use him as a raft. You both drown.", 400, 40);
+            showText("No clue what you were expecting here.", 400, 60);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op3Button)) {
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("You look cool... until you slip on a mossy rock and fall and drown");
+            showText("OPTION 3 SELECTED: You look cool... until you slip on a mossy rock and fall and drown", 400, 40);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op4Button)) {
-            System.out.println("OPTION 4 SELECTED");
-            System.out.println("Using common sense, you walk to and cross over using the nearby bridge.");
+            showText("OPTION 4 SELECTED: Using common sense, you walk to and cross over using the nearby bridge.", 400, 40);
             
             // Transition to the 'Bomb' world by setting the world to a new instance of 'Bomb'
             Greenfoot.setWorld(new Bomb());

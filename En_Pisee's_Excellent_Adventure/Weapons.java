@@ -20,14 +20,14 @@ public class Weapons extends Screen
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
         
-        // Print the introduction and choices for selecting a weapon to the console
-        System.out.println("You decide to take action and attempt to slay the dragon, freeing the villagers");
-        System.out.println("from their bindings so that they might live. You head to the local weapons");
-        System.out.println("merchant and find 4 weapons. Which do you take?");
-        System.out.println("1) Sword and shield");
-        System.out.println("2) Long Sword");
-        System.out.println("3) Dark Dagger");
-        System.out.println("4) Lighter");
+        // Print the introduction and choices for selecting a weapon to the console        
+        showText("You decide to take action and attempt to slay the dragon, freeing the villagers", 400, 20);
+        showText("from their bindings so that they might live. You head to the local weapons", 400, 40);
+        showText("merchant and find 4 weapons. Which do you take?", 400, 60);
+        showText("1) Sword and shield", 200, 130);
+        showText("2) Long Sword", 600, 130);
+        showText("3) Dark Dagger", 200, 160);
+        showText("4) Lighter", 600, 160);
         
         createEnPisee();
         // Call the 'createButtons()' method to create buttons
@@ -64,8 +64,7 @@ public class Weapons extends Screen
         // Check if the mouse click occurred on the 'op1Button' object
         if (Greenfoot.mouseClicked(op1Button)) {
             // Print "OPTION 1 SELECTED" to the console
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("Sword and shield");
+            showText("OPTION 1 SELECTED: Sword and shield", 100, 400);
             
             // Transition to the 'OldCrone' world by setting the world to a new instance of 'OldCrone'
             Greenfoot.setWorld(new OldCrone());
@@ -74,8 +73,7 @@ public class Weapons extends Screen
         // Check if the mouse click occurred on the 'op2Button' object
         if (Greenfoot.mouseClicked(op2Button)) {
             // Print "OPTION 2 SELECTED" to the console
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("Long Sword");
+            showText("OPTION 2 SELECTED: Long Sword", 100, 400);
             
             // Transition to the 'OldCrone' world by setting the world to a new instance of 'OldCrone'
             Greenfoot.setWorld(new OldCrone());
@@ -84,8 +82,7 @@ public class Weapons extends Screen
         // Check if the mouse click occurred on the 'op3Button' object
         if (Greenfoot.mouseClicked(op3Button)) {
             // Print "OPTION 3 SELECTED" to the console
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("Dark Dagger");
+            showText("OPTION 3 SELECTED: Dark Dagger", 100, 400);
             
             // Transition to the 'OldCrone' world by setting the world to a new instance of 'OldCrone'
             Greenfoot.setWorld(new OldCrone());
@@ -94,8 +91,7 @@ public class Weapons extends Screen
         // Check if the mouse click occurred on the 'op4Button' object
         if (Greenfoot.mouseClicked(op4Button)) {
             // Print "OPTION 4 SELECTED" to the console
-            System.out.println("OPTION 4 SELECTED");
-            System.out.println("Lighter");
+            showText("OPTION 4 SELECTED: Lighter", 100, 400);
             
             // Transition to the 'OldCrone' world by setting the world to a new instance of 'OldCrone'
             Greenfoot.setWorld(new OldCrone());

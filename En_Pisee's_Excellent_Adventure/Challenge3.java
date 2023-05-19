@@ -29,12 +29,13 @@ public class Challenge3 extends Screen
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
         
-        // Print the introduction and choices for the challenge to the console
-        System.out.println("'ENOUGH!!' The Dragon bellows! 'I will not have you insult my presence any longer!!'");
-        System.out.println("It charges you, looking to swallow you whole!");
-        System.out.println("1) Leap into the maw of the beast");
-        System.out.println("2) Dodge");
-        System.out.println("3) Charge");
+        // Print the introduction and choices for the challenge to the console        
+        showText("'ENOUGH!!' The Dragon bellows! 'I will not have you insult my", 400, 20);
+        showText("presence any longer!!' It charges you, looking to swallow you", 400, 40);
+        showText(" whole!", 400, 60);
+        showText("1) Leap", 200, 130);
+        showText("2) Dodge", 600, 130);
+        showText("3) Charge", 200, 160);     
         
         createEnPisee();
         
@@ -54,8 +55,6 @@ public class Challenge3 extends Screen
         op3Button = new Buttons("Option3.png");
         addObject(op3Button, 275, 475);
         
-        op4Button = new Buttons("Option4.png");
-        addObject(op4Button, 275, 540);
     }
     
     // Method that is called continuously by Greenfoot for the actor to perform actions
@@ -63,34 +62,25 @@ public class Challenge3 extends Screen
         // Check if the mouse click occurred on each button and perform corresponding actions based on the selected option
         
         if (Greenfoot.mouseClicked(op1Button)) {
-            System.out.println("OPTION 1 SELECTED");
-            System.out.println("You leap into the maw of the Dragon. He swallows you whole and you feel yourself slide");
-            System.out.println("down the gullet of the beast. You don't have much time. You use all of your remaining");
-            System.out.println("strength to slice and cut the innards of the Dragon. You hear their muffled screams of");
-            System.out.println("pain, their cries of pain slowly being turned into gargled screams as blood fills their");
-            System.out.println("throat. You fear that you may not survive the insides of the dragon, even though you");
-            System.out.println("slew the beast. However, the potion you drank gave you the resilience to not only ");
-            System.out.println("survive but cut your way out. You saved the village and lived to tell the tale. Thanks");
-            System.out.println("to you, the village thrives. Your story is shared across the land, a statue erected in");
-            System.out.println("the village square, and you are heralded as a hero.");
+            showText("OPTION 1 SELECTED", 400, 40);
             
             // Transition to the 'Challenge2' world by setting the world to a new instance of 'Challenge2'
             Greenfoot.setWorld(new NeutralEnd());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {
-            System.out.println("OPTION 2 SELECTED");
-            System.out.println("You attempt to dodge again, but you only move yourself directly into the dragon's");
-            System.out.println("teeth as its jaw clamps down, carving your body in two.");
+            showText("OPTION 2 SELECTED: You attempt to dodge again, but you only move yourself", 400, 40);
+            showText("directly into the dragon's teeth as its jaw clamps down, carving your body", 400, 80);
+            showText("in two.", 400, 100);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op3Button)) {
-            System.out.println("OPTION 3 SELECTED");
-            System.out.println("You charge the beast, running straight into its teeth. Resulting in you becoming");
-            System.out.println("a hard-earned snack.");
+            showText("OPTION 3 SELECTED: You charge the beast, running straight into its teeth.", 400, 40);
+            showText("Resulting in you becoming a hard-earned snack.", 400, 80);
+            showText("in two.", 400, 100);
             
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
