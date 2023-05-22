@@ -56,22 +56,22 @@ public class Village extends Screen
         // Create an instance of the 'Buttons' class named 'op1Button' with the image "Option1.png"
         op1Button = new Buttons("Option1.png");
         // Add the 'op1Button' object to the world at coordinates (100, 475)
-        addObject(op1Button, 100, 475);
+        addObject(op1Button, 100, 490);
         
         // Create an instance of the 'Buttons' class named 'op2Button' with the image "Option2.png"
         op2Button = new Buttons("Option2.png");
         // Add the 'op2Button' object to the world at coordinates (100, 540)
-        addObject(op2Button, 100, 540);
+        addObject(op2Button, 100, 560);
         
         // Create an instance of the 'Buttons' class named 'op3Button' with the image "Option3.png"
         op3Button = new Buttons("Option3.png");
         // Add the 'op3Button' object to the world at coordinates (275, 475)
-        addObject(op3Button, 275, 475);
+        addObject(op3Button, 275, 490);
         
         // Create an instance of the 'Buttons' class named 'op4Button' with the image "Option4.png"
         op4Button = new Buttons("Option4.png");
         // Add the 'op4Button' object to the world at coordinates (275, 540)
-        addObject(op4Button, 275, 540);
+        addObject(op4Button, 275, 560);
     }
     
     public void act() {
@@ -81,7 +81,7 @@ public class Village extends Screen
         if (Greenfoot.mouseClicked(op1Button)) {
             // Print "OPTION 1 SELECTED" to the console
             showText("OPTION 1 SELECTED:'No, seriously. WTF are you?'", 100, 400);
-            
+            Greenfoot.playSound("boop.mp3");
             // Increment the value of 'i' by 1
             i = i + 1;
             
@@ -93,7 +93,7 @@ public class Village extends Screen
         if (Greenfoot.mouseClicked(op2Button)) {
             // Print "OPTION 2 SELECTED" to the console
             showText("OPTION 2 SELECTED", 100, 400);
-            
+            Greenfoot.playSound("boop.mp3");
             // Set the value of 'i' to 6
             i = 6;
             
@@ -105,7 +105,7 @@ public class Village extends Screen
         if (Greenfoot.mouseClicked(op3Button)) {
             // Print "OPTION 3 SELECTED" to the console
             showText("OPTION 3 SELECTED", 100, 400);
-            
+            Greenfoot.playSound("boop.mp3");
             // Set the value of 'i' to 6
             i = 6;
             
@@ -117,7 +117,7 @@ public class Village extends Screen
         if (Greenfoot.mouseClicked(op4Button)) {
             // Print "OPTION 4 SELECTED" to the console
             showText("OPTION 4 SELECTED", 100, 400);
-            
+            Greenfoot.playSound("boop.mp3");
             // Set the value of 'i' to 6
             i = 6;
             
@@ -133,6 +133,6 @@ public class Village extends Screen
         testEnPisee = new EnPisee("NPCRightArm.png");
         
         // Add the 'testEnPisee' object to the world at coordinates (400, 300)
-        addObject(testEnPisee, 400, 300);
+        addObject(testEnPisee, 400, 320);
     }
 }

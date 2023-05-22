@@ -11,12 +11,13 @@ public class Intro extends Screen {
     private Buttons op1Button;
     private Buttons op2Button;
     
-    TextBox textbox= new TextBox("Cheese");
     
     public Intro() {
         // Constructor for the 'Intro' class
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
+        backgroundMusic.playLoop();
+        
         
         // Print introductory messages to the console
         showText("Hi! My Name is En Pisee! And this is my game and I shall be your narrator for", 400, 20);
@@ -41,13 +42,13 @@ public class Intro extends Screen {
         op1Button = new Buttons("Option1.png");
         
         // Add the 'op1Button' object to the world at coordinates (100, 475)
-        addObject(op1Button, 100, 475);
+        addObject(op1Button, 100, 490);
         
         // Create an instance of the 'Buttons' class named 'op2Button' with the image "Option2.png"
         op2Button = new Buttons("Option2.png");
         
         // Add the 'op2Button' object to the world at coordinates (100, 540)
-        addObject(op2Button, 100, 540);
+        addObject(op2Button, 100, 560);
     }
     
     public void act() {
@@ -57,7 +58,7 @@ public class Intro extends Screen {
         if (Greenfoot.mouseClicked(op1Button)) {
             // Print "OPTION 1 SELECTED" to the console
             showText("OPTION 1 SELECTED", 100, 400);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Village' world by setting the world to a new instance of 'Village'
             Greenfoot.setWorld(new Village());
         }
@@ -66,7 +67,7 @@ public class Intro extends Screen {
         if (Greenfoot.mouseClicked(op2Button)) {
             // Print "OPTION 2 SELECTED" to the console
             showText("OPTION 2 SELECTED", 100, 400);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Village' world by setting the world to a new instance of 'Village'
             Greenfoot.setWorld(new Village());
         }
@@ -79,6 +80,6 @@ public class Intro extends Screen {
         testEnPisee = new EnPisee("NPChappy.png");
         
         // Add the 'testEnPisee' object to the world at coordinates (400, 300)
-        addObject(testEnPisee, 400, 300);
+        addObject(testEnPisee, 400, 320);
     }
 }

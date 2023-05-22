@@ -42,7 +42,7 @@ public class NeutralEnd extends Screen
     
     public void createEnPisee() {
         testEnPisee = new EnPisee("NPCvhappy.png");
-        addObject(testEnPisee, 600, 300);
+        addObject(testEnPisee, 600, 400);
     }
 
 }

@@ -33,6 +33,7 @@ public class Start extends Screen
     public Start()
     {
         super(800, 600, 1);
+        
         main = new Main();
         intro = new Intro();
         village = new Village();
@@ -55,7 +56,7 @@ public class Start extends Screen
         
         main.createButtons();
         
-        gameover.createButtons(main);
+        gameover.createButtons();
         gameover.createEnPisee();
         
         intro.createButtons();
@@ -124,7 +125,8 @@ public class Start extends Screen
         
         sneak3.createButtons();
         sneak3.createEnPisee();
-        sneak3.createPlayerWeapon(); //placeholder
+        sneak3.createPlayerWeapon();
+        sneak3.createItems();//placeholder
         //challenge3.createItems(); //placeholder
         
         neutralEnd.createButtons(main);

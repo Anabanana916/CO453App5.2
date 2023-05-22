@@ -18,12 +18,14 @@ public class Sneak1 extends Screen
     private Buttons op2Button;
     private Buttons op3Button;
     private PlayerWeapon testPlayerWeapon;
+    private ItemsImages testItem;
     
     // Sneak1 class constructor
     public Sneak1()
     {
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
+        
         
         showText("You get behind the dragon, but you knock over some coins! The sound causes", 400, 20);
         showText("the dragon to raise its head suddenly and start looking around.", 400, 40);
@@ -33,19 +35,23 @@ public class Sneak1 extends Screen
         
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
+        createEnPisee();
+        createItems();
+        createPlayerWeapon();
+        
     }
     
     // Method to create buttons for the choices
     public void createButtons() {
         // Create instances of the 'Buttons' class with specific images and add them to the world at specific coordinates
         op1Button = new Buttons("Option1.png");
-        addObject(op1Button, 100, 475);
+        addObject(op1Button, 100, 490);
         
         op2Button = new Buttons("Option2.png");
-        addObject(op2Button, 100, 540);
+        addObject(op2Button, 100, 560);
         
         op3Button = new Buttons("Option3.png");
-        addObject(op3Button, 275, 475);
+        addObject(op3Button, 275, 490);
     }
     
     // Method that is called continuously by Greenfoot for the actor to perform actions
@@ -56,7 +62,7 @@ public class Sneak1 extends Screen
             showText("OPTION 1 SELECTED: You once heard that a dragon's vision is based", 400, 40);
             showText("on movement. You heard wrong. The Dragon crushes you with its.", 400, 60);
             showText("tail.", 400, 80);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
@@ -64,7 +70,7 @@ public class Sneak1 extends Screen
         if (Greenfoot.mouseClicked(op2Button)) {
             showText("OPTION 2 SELECTED: You duck behind a pile of treasure. The Dragon", 400, 40);
             showText("takes a moment, before returning to its rest.", 400, 80);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the next sneak challenge (Sneak2) by creating a new instance of 'Sneak2' world
             Greenfoot.setWorld(new Sneak2());
         }
@@ -72,7 +78,7 @@ public class Sneak1 extends Screen
         if (Greenfoot.mouseClicked(op3Button)) {
             showText("OPTION 3 SELECTED: The Dragon looks at you, bewildered. Then smiles.", 400, 40);
             showText("'Goodbye.' It blasts you with its lightning breath.", 400, 60);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
@@ -84,7 +90,7 @@ public class Sneak1 extends Screen
         testEnPisee = new EnPisee("NPCvhappy.png");
         
         // Add the 'testEnPisee' object to the world at coordinates (200, 200)
-        addObject(testEnPisee, 200, 200);
+        addObject(testEnPisee, 400, 320);
     }
     
     public void createPlayerWeapon() {
@@ -92,7 +98,15 @@ public class Sneak1 extends Screen
         testPlayerWeapon = new PlayerWeapon("Shield.png");
         
         // Add the 'testPlayerWeapon' object to the world at coordinates (500, 500)
-        addObject(testPlayerWeapon, 500, 500);
+        addObject(testPlayerWeapon, 500, 520);
+    }
+    
+    public void createItems() {
+        // Create an instance of the 'ItemsImages' class named 'testItem' with the image "Potion.png"
+        testItem = new ItemsImages("Potion.png");
+        
+        // Add the 'testItem' object to the world at coordinates (700, 500)
+        addObject(testItem, 700, 520);
     }
 }
 

@@ -16,8 +16,8 @@ public class Main extends Screen {
         // Call the 'createButtons()' method to create buttons
         createButtons();
         
-        // Call the 'prepare()' method for additional preparation
-        prepare();
+        
+        
     }
     
     public void createButtons() {
@@ -27,7 +27,7 @@ public class Main extends Screen {
         GreenfootImage buttonImage = new GreenfootImage("Option1.png");
         
         // Create an instance of the 'Buttons' class named 'op1Button' with the image "Option1.png"
-        op1Button = new Buttons("Option1.png");
+        op1Button = new Buttons("Startbut.png");
         
         // Add the 'op1Button' object to the world at coordinates (100, 475)
         addObject(op1Button, 100, 475);
@@ -38,19 +38,12 @@ public class Main extends Screen {
         
         // Check if the mouse click occurred on the 'op1Button' object
         if (Greenfoot.mouseClicked(op1Button)) {
-            // Print "Game Starts" to the console
-            //System.out.println("Game Starts");
-            
+            Greenfoot.playSound("boop.mp3");
             
             // Transition to the 'Intro' world by setting the world to a new instance of 'Intro'
             Greenfoot.setWorld(new Intro());
         }
+        
     }
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
-    {
-    }
+    
 }

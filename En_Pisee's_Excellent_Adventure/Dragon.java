@@ -38,19 +38,21 @@ public class Dragon extends Screen
         
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
+        createItems();
+        createPlayerWeapon();
     }
     
     // Method to create buttons for the choices
     public void createButtons() {
         // Create instances of the 'Buttons' class with specific images and add them to the world at specific coordinates
         op1Button = new Buttons("Option1.png");
-        addObject(op1Button, 100, 475);
+        addObject(op1Button, 100, 490);
         
         op2Button = new Buttons("Option2.png");
-        addObject(op2Button, 100, 540);
+        addObject(op2Button, 100, 560);
         
         op3Button = new Buttons("Option3.png");
-        addObject(op3Button, 275, 475);
+        addObject(op3Button, 275, 490);
         
     }
     
@@ -62,14 +64,14 @@ public class Dragon extends Screen
             showText("OPTION 1 SELECTED: 'WAKE UP YOU SCALEY GIT!' You yell. The Dragon opens one", 400, 40);
             showText("eye, looks at you, and with a yawn opens its maw and blasts you with", 400, 60);
             showText("its lightening breath. Killing you instantly.", 400, 80);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op2Button)) {
             showText("OPTION 2 SELECTED: 'I challenge thee, vile beast!' You bellow.", 400, 40);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Challenge1' world by setting the world to a new instance of 'Challenge1'
             Greenfoot.setWorld(new Challenge1());
         }
@@ -77,7 +79,7 @@ public class Dragon extends Screen
         if (Greenfoot.mouseClicked(op3Button)) {            
             showText("OPTION 3 SELECTED: You duck down low and cautiously make your way behind the", 400, 40);
             showText("dragon.", 400, 60);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Sneak1' world by setting the world to a new instance of 'Sneak1'
             Greenfoot.setWorld(new Sneak1());
         }
@@ -90,7 +92,7 @@ public class Dragon extends Screen
         testEnPisee = new EnPisee("NPCworry.png");
         
         // Add the 'testEnPisee' object to the world at coordinates (400, 300)
-        addObject(testEnPisee, 400, 300);
+        addObject(testEnPisee, 400, 320);
     }
     
     // Method to create the 'PlayerWeapon' object
@@ -99,7 +101,7 @@ public class Dragon extends Screen
         testPlayerWeapon = new PlayerWeapon("Shield.png");
         
         // Add the 'testPlayerWeapon' object to the world at coordinates (500, 500)
-        addObject(testPlayerWeapon, 500, 500);
+        addObject(testPlayerWeapon, 500, 520);
     }
     
     // Method to create the 'ItemsImages' object
@@ -108,6 +110,6 @@ public class Dragon extends Screen
         testItem = new ItemsImages("Potion.png");
         
         // Add the 'testItem' object to the world at coordinates (700, 500)
-        addObject(testItem, 700, 500);
+        addObject(testItem, 700, 520);
     }
 }

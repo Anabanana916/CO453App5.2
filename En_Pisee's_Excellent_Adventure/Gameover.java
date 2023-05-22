@@ -20,17 +20,15 @@ public class Gameover extends Screen
     public Gameover()
     {
         super(800, 600, 1);
-        showText("That's Game Over. Nice try! But you might want to consider your choices carefully.", 400, 40);
-        showText("Return to Menu.", 390, 500);
-        
+        showText("That's Game Over. Nice try! But you might want to consider your choices carefully.", 400, 75);
+        createButtons();
         createEnPisee();
     }
     
-    public void createButtons(Screen link) {
-        op1Button = new Buttons("Option1.png");
-        addObject(op1Button, 100, 475);
-        
-        
+        public void createButtons() {
+        GreenfootImage buttonImage = new GreenfootImage("Option1.png");
+        op1Button = new Buttons("Menubut.png");
+        addObject(op1Button, 390, 500);
     }
     
     public void act() {
@@ -40,7 +38,7 @@ public class Gameover extends Screen
         if (Greenfoot.mouseClicked(op1Button)) {
             // Print "OPTION 1 SELECTED" to the console
             showText("OPTION 1 SELECTED", 100, 400);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Village' world by setting the world to a new instance of 'Village'
             Greenfoot.setWorld(new Main());
         }

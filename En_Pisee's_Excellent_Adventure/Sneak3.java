@@ -18,6 +18,7 @@ public class Sneak3 extends Screen
     private Buttons op2Button;
     private Buttons op3Button;
     private PlayerWeapon testPlayerWeapon;
+    private ItemsImages testItem;
     
     // Sneak3 class constructor
     public Sneak3()
@@ -34,19 +35,22 @@ public class Sneak3 extends Screen
         
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
+        createEnPisee();
+        createItems();
+        createPlayerWeapon();
     }
     
     // Method to create buttons for the choices
     public void createButtons() {
         // Create instances of the 'Buttons' class with specific images and add them to the world at specific coordinates
         op1Button = new Buttons("Option1.png");
-        addObject(op1Button, 100, 475);
+        addObject(op1Button, 100, 490);
         
         op2Button = new Buttons("Option2.png");
-        addObject(op2Button, 100, 540);
+        addObject(op2Button, 100, 560);
         
         op3Button = new Buttons("Option3.png");
-        addObject(op3Button, 275, 475);
+        addObject(op3Button, 275, 490);
     }
     
     // Method that is called continuously by Greenfoot for the actor to perform actions
@@ -55,7 +59,7 @@ public class Sneak3 extends Screen
         
         if (Greenfoot.mouseClicked(op1Button)) {
             showText("OPTION 1 SELECTED", 400, 40);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new EvilEnding());
         }
@@ -63,6 +67,7 @@ public class Sneak3 extends Screen
         if (Greenfoot.mouseClicked(op2Button)) {
             showText("OPTION 2 SELECTED: You begin tickling the beast. It erupts in roars of laughter!", 400, 40);
             showText("In it's uncontrollable laughter, it rolls over and crushes you", 400, 60);
+            Greenfoot.playSound("boop.mp3");
             // Transition to the next sneak challenge (Sneak3) by creating a new instance of 'Sneak2' world
             Greenfoot.setWorld(new Gameover());
         }
@@ -71,6 +76,7 @@ public class Sneak3 extends Screen
             showText("OPTION 3 SELECTED: You stab your dagger into the beast. It's head snaps up", 400, 40);
             showText("and whirls around to face you. 'Ow!' It says, sounding heavily insulted. It", 400, 60);
             showText("blasts you with its lightening breath. Frying you to a crisp.", 400, 80);
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
@@ -82,7 +88,7 @@ public class Sneak3 extends Screen
         testEnPisee = new EnPisee("NPCvhappy.png");
         
         // Add the 'testEnPisee' object to the world at coordinates (200, 200)
-        addObject(testEnPisee, 200, 200);
+        addObject(testEnPisee, 400, 320);
     }
     
     public void createPlayerWeapon() {
@@ -90,7 +96,15 @@ public class Sneak3 extends Screen
         testPlayerWeapon = new PlayerWeapon("Shield.png");
         
         // Add the 'testPlayerWeapon' object to the world at coordinates (500, 500)
-        addObject(testPlayerWeapon, 500, 500);
+        addObject(testPlayerWeapon, 500, 520);
+    }
+    
+    public void createItems() {
+        // Create an instance of the 'ItemsImages' class named 'testItem' with the image "Potion.png"
+        testItem = new ItemsImages("Potion.png");
+        
+        // Add the 'testItem' object to the world at coordinates (700, 500)
+        addObject(testItem, 700, 520);
     }
 }
 

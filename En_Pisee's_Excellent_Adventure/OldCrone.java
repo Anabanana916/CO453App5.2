@@ -43,19 +43,19 @@ public class OldCrone extends Screen
         op1Button = new Buttons("Option1.png");
         
         // Add the 'op1Button' object to the world at coordinates (100, 475)
-        addObject(op1Button, 100, 475);
+        addObject(op1Button, 100, 490);
         
         // Create an instance of the 'Buttons' class named 'op2Button' with the image "Option2.png"
         op2Button = new Buttons("Option2.png");
         
         // Add the 'op2Button' object to the world at coordinates (100, 540)
-        addObject(op2Button, 100, 540);
+        addObject(op2Button, 100, 560);
         
         // Create an instance of the 'Buttons' class named 'op3Button' with the image "Option3.png"
         op3Button = new Buttons("Option3.png");
         
         // Add the 'op3Button' object to the world at coordinates (275, 475)
-        addObject(op3Button, 275, 475);
+        addObject(op3Button, 275, 490);
     }
     
     public void act() {
@@ -65,7 +65,7 @@ public class OldCrone extends Screen
         if (Greenfoot.mouseClicked(op1Button)) {
             // Print "OPTION 1 SELECTED" to the console
             showText("OPTION 1 SELECTED: She hands you a potion. It glows with a mysterious power.", 100, 400);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'River' world by setting the world to a new instance of 'River'
             Greenfoot.setWorld(new River());
         }
@@ -74,7 +74,7 @@ public class OldCrone extends Screen
         if (Greenfoot.mouseClicked(op2Button)) {
             // Print "OPTION 2 SELECTED" to the console
             showText("OPTION 2 SELECTED: You ignore the crone. She smelt funny anyway.", 100, 400);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'River' world by setting the world to a new instance of 'River'
             Greenfoot.setWorld(new River());
         }
@@ -86,7 +86,7 @@ public class OldCrone extends Screen
             showText("smiles. Her yellow teeth showing the many years of dental neglect as a", 400, 40);
             showText("strange, green smoke surrounds the pair of you. You feel strange. Prickly", 400, 60);
             showText("even. You can't see, but you have been turned into a cactus.", 400, 80);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
@@ -100,7 +100,7 @@ public class OldCrone extends Screen
         testEnPisee = new EnPisee("NPC.png");
         
         // Add the 'testEnPisee' object to the world at coordinates (400, 300)
-        addObject(testEnPisee, 400, 300);
+        addObject(testEnPisee, 400, 320);
     }
     
     public void createPlayerWeapon() {
@@ -110,7 +110,7 @@ public class OldCrone extends Screen
         testPlayerWeapon = new PlayerWeapon("Shield.png");
         
         // Add the 'testPlayerWeapon' object to the world at coordinates (500, 500)
-        addObject(testPlayerWeapon, 500, 500);
+        addObject(testPlayerWeapon, 500, 520);
     }
 
 }

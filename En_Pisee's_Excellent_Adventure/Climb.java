@@ -40,19 +40,21 @@ public class Climb extends Screen
         
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
+        createItems();
+        createPlayerWeapon();
     }
     
     // Method to create buttons for the choices
     public void createButtons() {
         // Create instances of the 'Buttons' class with specific images and add them to the world at specific coordinates
         op1Button = new Buttons("Option1.png");
-        addObject(op1Button, 100, 475);
+        addObject(op1Button, 100, 490);
         
         op2Button = new Buttons("Option2.png");
-        addObject(op2Button, 100, 540);
+        addObject(op2Button, 100, 560);
         
         op3Button = new Buttons("Option3.png");
-        addObject(op3Button, 275, 475);
+        addObject(op3Button, 275, 490);
         
     }
     
@@ -63,7 +65,7 @@ public class Climb extends Screen
         if (Greenfoot.mouseClicked(op1Button)) {
             showText("OPTION 1 SELECTED: You attempt to scale the cliff, but a rock breaks as you push off and", 400, 40);
             showText("you fall and become a pizza splat on the ground.", 400, 40);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
@@ -71,14 +73,14 @@ public class Climb extends Screen
         if (Greenfoot.mouseClicked(op2Button)) {
             showText("OPTION 2 SELECTED: You take the scenic route. Taking in the beautiful views as you safely make", 400, 40);
             showText("your way to the top.", 400, 40);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Cave' world by setting the world to a new instance of 'Cave'
             Greenfoot.setWorld(new Cave());
         }
         
         if (Greenfoot.mouseClicked(op3Button)) {
             showText("OPTION 3 SELECTED: You wait for a lift, and a rock squishes you flat.", 400, 40);            
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
@@ -90,7 +92,7 @@ public class Climb extends Screen
         testEnPisee = new EnPisee("NPChappy.png");
         
         // Add the 'testEnPisee' object to the world at coordinates (400, 300)
-        addObject(testEnPisee, 400, 300);
+        addObject(testEnPisee, 400, 320);
     }
     
     // Method to create the 'PlayerWeapon' object
@@ -99,7 +101,7 @@ public class Climb extends Screen
         testPlayerWeapon = new PlayerWeapon("Shield.png");
         
         // Add the 'testPlayerWeapon' object to the world at coordinates (500, 500)
-        addObject(testPlayerWeapon, 500, 500);
+        addObject(testPlayerWeapon, 500, 520);
     }
     
     // Method to create the 'ItemsImages' object
@@ -108,6 +110,6 @@ public class Climb extends Screen
         testItem = new ItemsImages("Potion.png");
         
         // Add the 'testItem' object to the world at coordinates (700, 500)
-        addObject(testItem, 700, 500);
+        addObject(testItem, 700, 520);
     }
 }

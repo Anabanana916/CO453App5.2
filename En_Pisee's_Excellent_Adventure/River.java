@@ -41,22 +41,23 @@ public class River extends Screen
         // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
         createPlayerWeapon();
+        createItems();
     }
     
     // Method to create buttons for the choices
     public void createButtons() {
         // Create instances of the 'Buttons' class with specific images and add them to the world at specific coordinates
         op1Button = new Buttons("Option1.png");
-        addObject(op1Button, 100, 475);
+        addObject(op1Button, 100, 490);
         
         op2Button = new Buttons("Option2.png");
-        addObject(op2Button, 100, 540);
+        addObject(op2Button, 100, 560);
         
         op3Button = new Buttons("Option3.png");
-        addObject(op3Button, 275, 475);
+        addObject(op3Button, 275, 490);
         
         op4Button = new Buttons("Option4.png");
-        addObject(op4Button, 275, 540);
+        addObject(op4Button, 275, 560);
     }
     
     // Method that is called continuously by Greenfoot for the actor to perform actions
@@ -65,7 +66,7 @@ public class River extends Screen
         
         if (Greenfoot.mouseClicked(op1Button)) {
             showText("OPTION 1 SELECTED: You jump into the water. The current carries you away, causing you to drown.", 400, 40);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
@@ -73,21 +74,21 @@ public class River extends Screen
         if (Greenfoot.mouseClicked(op2Button)) {
             showText("OPTION 2 SELECTED: You grab a nearby villager and attempt to use him as a raft. You both drown.", 400, 40);
             showText("No clue what you were expecting here.", 400, 60);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op3Button)) {
             showText("OPTION 3 SELECTED: You look cool... until you slip on a mossy rock and fall and drown", 400, 40);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
         if (Greenfoot.mouseClicked(op4Button)) {
             showText("OPTION 4 SELECTED: Using common sense, you walk to and cross over using the nearby bridge.", 400, 40);
-            
+            Greenfoot.playSound("boop.mp3");
             // Transition to the 'Bomb' world by setting the world to a new instance of 'Bomb'
             Greenfoot.setWorld(new Bomb());
         }
@@ -99,7 +100,7 @@ public class River extends Screen
         testEnPisee = new EnPisee("NPC....png");
         
         // Add the 'testEnPisee' object to the world at coordinates (400, 300)
-        addObject(testEnPisee, 400, 300);
+        addObject(testEnPisee, 400, 320);
     }
     
     // Method to create the 'PlayerWeapon' object
@@ -108,7 +109,7 @@ public class River extends Screen
         testPlayerWeapon = new PlayerWeapon("Shield.png");
         
         // Add the 'testPlayerWeapon' object to the world at coordinates (500, 500)
-        addObject(testPlayerWeapon, 500, 500);
+        addObject(testPlayerWeapon, 500, 520);
     }
     
     // Method to create the 'ItemsImages' object
@@ -117,6 +118,6 @@ public class River extends Screen
         testItem = new ItemsImages("Potion.png");
         
         // Add the 'testItem' object to the world at coordinates (700, 500)
-        addObject(testItem, 700, 500);
+        addObject(testItem, 700, 520);
     }
 }

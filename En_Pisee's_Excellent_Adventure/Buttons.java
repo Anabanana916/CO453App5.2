@@ -16,8 +16,8 @@ public class Buttons extends Actor
     
     public Buttons(String image){
         setImage(new GreenfootImage(image));
-        
+ 
     }
     
-
+    
 }
