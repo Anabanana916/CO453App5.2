@@ -3,7 +3,8 @@ import greenfoot.*;
 public class Main extends Screen {
 
     private Buttons op1Button;
-
+    
+    
     /**
      * Constructor for objects of class Main.
      * 

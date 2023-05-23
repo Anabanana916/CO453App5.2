@@ -16,7 +16,6 @@ public class Intro extends Screen {
         // Constructor for the 'Intro' class
         // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
-        backgroundMusic.playLoop();
         
         
         // Print introductory messages to the console
@@ -33,6 +32,9 @@ public class Intro extends Screen {
         
         // Call the 'createButtons()' method to create buttons
         createButtons();
+        
+        
+        
     }
     
     public void createButtons() {
@@ -59,6 +61,7 @@ public class Intro extends Screen {
             // Print "OPTION 1 SELECTED" to the console
             showText("OPTION 1 SELECTED", 100, 400);
             Greenfoot.playSound("boop.mp3");
+            
             // Transition to the 'Village' world by setting the world to a new instance of 'Village'
             Greenfoot.setWorld(new Village());
         }
@@ -68,6 +71,7 @@ public class Intro extends Screen {
             // Print "OPTION 2 SELECTED" to the console
             showText("OPTION 2 SELECTED", 100, 400);
             Greenfoot.playSound("boop.mp3");
+            
             // Transition to the 'Village' world by setting the world to a new instance of 'Village'
             Greenfoot.setWorld(new Village());
         }

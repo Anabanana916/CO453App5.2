@@ -9,13 +9,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Screen extends World
 {
 
-    GreenfootSound backgroundMusic = new GreenfootSound("BitShift.mp3");
-    
+    private static GreenfootSound backgroundMusic = new GreenfootSound("BitShift.mp3");
     public Screen(int width, int height, int pixels)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(width, height, pixels);
-        backgroundMusic.setVolume(40);
+        
+        
+        if (!backgroundMusic.isPlaying()){
+            backgroundMusic.playLoop();
+            backgroundMusic.setVolume(30);
+        }
         
     }
     

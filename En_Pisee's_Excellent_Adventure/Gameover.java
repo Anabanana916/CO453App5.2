@@ -20,12 +20,13 @@ public class Gameover extends Screen
     public Gameover()
     {
         super(800, 600, 1);
+        
         showText("That's Game Over. Nice try! But you might want to consider your choices carefully.", 400, 75);
         createButtons();
         createEnPisee();
     }
     
-        public void createButtons() {
+    public void createButtons() {
         GreenfootImage buttonImage = new GreenfootImage("Option1.png");
         op1Button = new Buttons("Menubut.png");
         addObject(op1Button, 390, 500);
