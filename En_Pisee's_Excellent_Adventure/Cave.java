@@ -11,9 +11,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+/**
+ * This code defines a class named "Cave" that extends the "Screen" class.
+ * It declares private instance variables for various objects.
+ * 
+ * The class constructor initializes the superclass with width 800, height 600, and pixel size 1.
+ * It displays introduction and choices for the cave scene on the screen.
+ * It creates instances of buttons and adds them to the world.
+ * It also creates instances of other objects and adds them to the world.
+ * 
+ * The 'act' method is called continuously by Greenfoot and checks for mouse clicks on the buttons.
+ * It performs corresponding actions based on the selected option and transitions to other worlds accordingly.
+ * 
+ * The 'createEnPisee' method creates an instance of the 'EnPisee' class and adds it to the world.
+ * 
+ * The 'createPlayerWeapon' method creates an instance of the 'PlayerWeapon' class and adds it to the world.
+ * 
+ * The 'createItems' method creates an instance of the 'ItemsImages' class and adds it to the world.
+ */
 public class Cave extends Screen
 {
-    // Declare private instance variables
     private EnPisee testEnPisee;
     private PlayerWeapon testPlayerWeapon;
     private ItemsImages testItem;
@@ -21,13 +38,10 @@ public class Cave extends Screen
     private Buttons op2Button;
     private Buttons op3Button;
     
-    // Cave class constructor
     public Cave()
     {
-        // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
         
-        // Print the introduction and choices for the cave scene to the console
         showText("You reach the Dragon's cave. Walking through the dark tunnels, you find it", 400, 20);
         showText("hard to navigate through. You trip on a rock that you didn't see, and 100", 400, 40);
         showText(" red eyes appear from the ceiling. A swarm of bats charge towards you!", 400, 40);
@@ -37,15 +51,12 @@ public class Cave extends Screen
         
         createEnPisee();
         
-        // Call the 'createButtons()' method to create buttons for the choices
         createButtons();
         createItems();
         createPlayerWeapon();
     }
     
-    // Method to create buttons for the choices
     public void createButtons() {
-        // Create instances of the 'Buttons' class with specific images and add them to the world at specific coordinates
         op1Button = new Buttons("Option1.png");
         addObject(op1Button, 100, 490);
         
@@ -56,15 +67,11 @@ public class Cave extends Screen
         addObject(op3Button, 275, 490);
     }
     
-    // Method that is called continuously by Greenfoot for the actor to perform actions
     public void act() {
-        // Check if the mouse click occurred on each button and perform corresponding actions based on the selected option
-        
         if (Greenfoot.mouseClicked(op1Button)) {
             showText("OPTION 1 SELECTED: You are swarmed by the bats. When they finally leave,", 400, 40);
             showText("the only thing left of you is a skeleton.", 400, 40);
             Greenfoot.playSound("boop.mp3");
-            // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
         
@@ -72,7 +79,6 @@ public class Cave extends Screen
             showText("OPTION 2 SELECTED: You take your weapon and break a nearby wall and get", 400, 40);
             showText("away from the bats.", 400, 40);
             Greenfoot.playSound("boop.mp3");
-            // Transition to the 'Dragon' world by setting the world to a new instance of 'Dragon'
             Greenfoot.setWorld(new Dragon());
         }
         
@@ -80,35 +86,22 @@ public class Cave extends Screen
             showText("OPTION 3 SELECTED: You run through the dark cave, running into a wall and causing a", 400, 40);
             showText("stalagmite... stalactite? One of those pointy rock thingies to fall on top of you.", 400, 40);
             Greenfoot.playSound("boop.mp3");
-            // Transition to the 'Gameover' world by setting the world to a new instance of 'Gameover'
             Greenfoot.setWorld(new Gameover());
         }
     }
     
-    // Method to create the 'EnPisee' object
     public void createEnPisee() {
-        // Create an instance of the 'EnPisee' class named 'testEnPisee' with the image "NPCdone.png"
         testEnPisee = new EnPisee("NPCdone.png");
-        
-        // Add the 'testEnPisee' object to the world at coordinates (400, 300)
         addObject(testEnPisee, 400, 320);
     }
     
-    // Method to create the 'PlayerWeapon' object
     public void createPlayerWeapon() {
-        // Create an instance of the 'PlayerWeapon' class named 'testPlayerWeapon' with the image "Shield.png"
         testPlayerWeapon = new PlayerWeapon("Shield.png");
-        
-        // Add the 'testPlayerWeapon' object to the world at coordinates (500, 500)
         addObject(testPlayerWeapon, 500, 520);
     }
     
-    // Method to create the 'ItemsImages' object
     public void createItems() {
-        // Create an instance of the 'ItemsImages' class named 'testItem' with the image "Potion.png"
         testItem = new ItemsImages("Potion.png");
-        
-        // Add the 'testItem' object to the world at coordinates (700, 500)
         addObject(testItem, 700, 520);
     }
 }

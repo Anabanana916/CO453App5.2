@@ -6,6 +6,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+
+
+/**
+ * This code defines a class named "Screen" that extends the "World" class.
+ * It contains a static variable "backgroundMusic" of type "GreenfootSound" and initializes it with the sound file "BitShift.mp3".
+ * 
+ * The class constructor takes three integer parameters: width, height, and pixels.
+ * It creates a new world with the specified width, height, and pixels as the cell size.
+ * 
+ * Inside the constructor, it checks if the background music is not currently playing.
+ * If the music is not playing, it starts playing the background music in a loop and sets the volume to 0 (mute).
+ */
+
 public class Screen extends World
 {
 
@@ -18,7 +31,7 @@ public class Screen extends World
         
         if (!backgroundMusic.isPlaying()){
             backgroundMusic.playLoop();
-            backgroundMusic.setVolume(30);
+            backgroundMusic.setVolume(20);
         }
         
     }

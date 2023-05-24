@@ -1,50 +1,53 @@
 import greenfoot.*;
+/**
+ * The class Main represents the main menu screen of a game 
+ * or application. It extends the Screen class.
+
+ * The constructor initializes the screen dimensions and creates a start button by calling the
+ * createButtons() method.
+
+ * The createButtons() method creates a start button object and adds it to the scene at a 
+ * specific location.
+
+ * The act() method continuously checks for mouse clicks on the start button. If the button is
+ * clicked, it plays a sound and transitions to the Intro screen by creating a new instance of
+ * the Intro class.
+
+ * In summary, this code sets up a simple main menu screen with a start button. Clicking the 
+ * start button triggers a transition to the introductory screen of the game or application.
+ */
+
 
 public class Main extends Screen {
 
     private Buttons op1Button;
-    
-    
+
     /**
      * Constructor for objects of class Main.
-     * 
+     * Initializes the world and sets up the main menu with a start button.
+     * Creates and adds a start button to the world.
      */
     public Main() {
-        // Constructor for the 'Main' class
-        // Call the superclass constructor with parameters (800, 600, 1)
         super(800, 600, 1);
-        
-        // Call the 'createButtons()' method to create buttons
         createButtons();
-        
-        
-        
     }
-    
+
+    /**
+     * Creates a start button and adds it to the world.
+     */
     public void createButtons() {
-        // Method to create buttons
-        
-        // Create a GreenfootImage object named 'buttonImage' from the image file "Option1.png"
-        GreenfootImage buttonImage = new GreenfootImage("Option1.png");
-        
-        // Create an instance of the 'Buttons' class named 'op1Button' with the image "Option1.png"
         op1Button = new Buttons("Startbut.png");
-        
-        // Add the 'op1Button' object to the world at coordinates (100, 475)
         addObject(op1Button, 100, 475);
     }
-    
+
+    /**
+     * Method executed continuously during the game.
+     * Checks for mouse clicks on the start button and transitions to the 'Intro' world.
+     */
     public void act() {
-        // Method executed continuously during the game
-        
-        // Check if the mouse click occurred on the 'op1Button' object
         if (Greenfoot.mouseClicked(op1Button)) {
             Greenfoot.playSound("boop.mp3");
-            
-            // Transition to the 'Intro' world by setting the world to a new instance of 'Intro'
             Greenfoot.setWorld(new Intro());
         }
-        
     }
-    
 }
