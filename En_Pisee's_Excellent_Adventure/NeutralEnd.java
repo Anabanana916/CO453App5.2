@@ -1,8 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The class called NeutralEnd shows a neutral ending screen
- * for the game. It extends the Screen class.
+ * The class NeutralEnd shows a neutral ending screen
+ * for the game. It also extends the Screen class.
  * 
  * The constructor initialises the screen dimensions and displays descriptive text using the 
  * showText() method. It describes a scenario where the player bravely fights inside the 

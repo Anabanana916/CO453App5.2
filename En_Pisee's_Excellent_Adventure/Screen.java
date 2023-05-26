@@ -31,7 +31,7 @@ public class Screen extends World
         
         if (!backgroundMusic.isPlaying()){
             backgroundMusic.playLoop();
-            backgroundMusic.setVolume(20);
+            backgroundMusic.setVolume(0);
         }
         
     }

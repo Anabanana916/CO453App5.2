@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This class called EvilEnding that represents a scene or ending in a game or application.
+ * This class called EvilEnding represents one ending.
  * It extends a class called Screen. The class contains private variables for character 
  * instances, player weapons, items/images, and buttons.
  * The constructor initializes the scene by setting up the screen dimensions and displaying 

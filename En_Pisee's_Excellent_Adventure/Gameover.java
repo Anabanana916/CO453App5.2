@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The class called Gameover that represents a game over screen. It displays a text message
+ * The class Gameover represents a game over screen. It displays a text message
  * and creates buttons for the player to interact with. When the player clicks on a button,
  * a corresponding action is performed, such as transitioning to a different game world. 
  * Additionally, a character is displayed on the screen.

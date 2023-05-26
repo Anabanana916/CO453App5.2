@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The OldCrone class is a representation of an encounter with an old crone in a game. 
+ * The OldCrone class is a representation of an encounter with an old crone. 
  * It extends the Screen class and is responsible for displaying the interaction options and 
  * handling the player's choices.
 

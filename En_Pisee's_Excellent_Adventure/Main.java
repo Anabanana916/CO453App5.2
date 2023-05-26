@@ -1,7 +1,6 @@
 import greenfoot.*;
 /**
- * The class Main represents the main menu screen of a game 
- * or application. It extends the Screen class.
+ * The class Main represents the main menu screen of the game and it extends the Screen class.
 
  * The constructor initializes the screen dimensions and creates a start button by calling the
  * createButtons() method.

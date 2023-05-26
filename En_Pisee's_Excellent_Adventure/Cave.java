@@ -12,9 +12,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 /**
- * This code defines a class named "Cave" that extends the "Screen" class.
- * It declares private instance variables for various objects.
- * 
  * The class constructor initializes the superclass with width 800, height 600, and pixel size 1.
  * It displays introduction and choices for the cave scene on the screen.
  * It creates instances of buttons and adds them to the world.
